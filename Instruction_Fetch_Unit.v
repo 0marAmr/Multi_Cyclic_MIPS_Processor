@@ -6,12 +6,12 @@ module Instruction_Fetch_Unit
                 INSTR_WIDTH = 32
 )(
     input   wire                        CLK, RST,
-    input   wire                        PC_LOAD, IorD, IR_EN,
+    input   wire                        PC_LOAD, IorD, IR_EN, EPC_EN,
     input   wire [2:0]                  PC_SEL,
     input   wire [ADDRESS_WIDTH-1:0]    ALU_OUT, ALU_REG_OUT, Reg1_Out,
     input   wire [ADDRESS_WIDTH-1:0]    RAM_OUT,                /*Instruction From RAM*/
     output  wire [ADDRESS_WIDTH-1:0]    Instr, 
-    output  wire [ADDRESS_WIDTH-1:0]    Addr, PC_OUT
+    output  wire [ADDRESS_WIDTH-1:0]    Addr, PC_OUT, EPC_OUT
 );
 
 
@@ -82,6 +82,20 @@ mux_8_to_1 #(
     .in6(NC),	
     .in7(NC), 	
     .out(PC_SEL_WIRE)  
+);
+
+/////////////////////////////////////////////////////////////
+/////////////////////// EPC Register ////////////////////////
+/////////////////////////////////////////////////////////////
+
+register_en #(
+    .width(ADDRESS_WIDTH)
+) EPC (
+    .CLK(CLK),
+    .RST(RST),
+    .EN(EPC_EN),
+    .data_in(PC_OUT),
+    .data_out(EPC_OUT)
 );
 
 endmodule
