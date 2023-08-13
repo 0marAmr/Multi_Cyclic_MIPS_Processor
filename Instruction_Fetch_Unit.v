@@ -10,7 +10,7 @@ module Instruction_Fetch_Unit
     input   wire [2:0]                  PC_SEL,
     input   wire [ADDRESS_WIDTH-1:0]    ALU_OUT, ALU_REG_OUT, Reg1_Out,
     input   wire [ADDRESS_WIDTH-1:0]    RAM_OUT,                /*Instruction From RAM*/
-    output  wire [ADDRESS_WIDTH-1:0]    Instr, WriteData,
+    output  wire [ADDRESS_WIDTH-1:0]    Instr, 
     output  wire [ADDRESS_WIDTH-1:0]    Addr, PC_OUT
 );
 
