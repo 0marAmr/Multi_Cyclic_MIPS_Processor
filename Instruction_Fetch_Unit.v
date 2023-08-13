@@ -18,6 +18,9 @@ module Instruction_Fetch_Unit
 /////////////////////////////////////////////////////////////////
 //////////////////////// Program Counter ////////////////////////
 /////////////////////////////////////////////////////////////////
+
+wire [ADDRESS_WIDTH-1:0] PC_SEL_WIRE;
+
 register_en #(
     .width(ADDRESS_WIDTH)
 ) PC (
@@ -66,8 +69,6 @@ Concatenate concat_block (
     .in3(PC_OUT[31:28]), 
     .CAT_OUT(CAT_OUT)
     );
-
-wire [ADDRESS_WIDTH-1:0] PC_SEL_WIRE;
 
 mux_8_to_1 #(
     .WIDTH(ADDRESS_WIDTH)
