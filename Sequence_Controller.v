@@ -145,7 +145,6 @@ module Sequence_Controller(
 	next_state		= State0;
 
 	case(current_state) 
-
 		State0	: 	begin			// FETCH
 				MEM_OE = 1;
 				IorD = 0;
