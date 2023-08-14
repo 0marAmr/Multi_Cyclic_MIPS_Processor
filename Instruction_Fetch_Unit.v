@@ -1,24 +1,22 @@
-`define NC 0
-
 module Instruction_Fetch_Unit 
 #(
     parameter   ADDRESS_WIDTH = 32,
-                INSTR_WIDTH = 32
+                INSTR_WIDTH = 32,
+                DATA_WIDTH = 32
 )(
     input   wire                        CLK, RST,
     input   wire                        PC_LOAD, IorD, IR_EN, EPC_EN,
     input   wire [2:0]                  PC_SEL,
-    input   wire [ADDRESS_WIDTH-1:0]    ALU_OUT, ALU_REG_OUT, Reg1_Out,
+    input   wire [DATA_WIDTH-1:0]       ALU_OUT, ALU_REG_OUT, Reg1_Out,
     input   wire [ADDRESS_WIDTH-1:0]    RAM_OUT,                /*Instruction From RAM*/
     output  wire [ADDRESS_WIDTH-1:0]    Instr, 
     output  wire [ADDRESS_WIDTH-1:0]    Addr, PC_OUT, EPC_OUT
 );
 
-
+localparam NC = 0;
 /////////////////////////////////////////////////////////////////
 //////////////////////// Program Counter ////////////////////////
 /////////////////////////////////////////////////////////////////
-
 wire [ADDRESS_WIDTH-1:0] PC_SEL_WIRE;
 
 register_en #(
