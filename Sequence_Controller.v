@@ -115,7 +115,6 @@ module Sequence_Controller(
 	end
 
 
-
 	/*	Next State logic	*/
 	always@(*) begin
 	//default values
