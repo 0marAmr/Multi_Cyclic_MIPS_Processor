@@ -5,7 +5,7 @@ module DataPath #(
 )(
 input	wire			CLK,
 input	wire			RST,
-input   wire [DATA_WIDTH-1: 0]      DATA,     
+input   wire [DATA_WIDTH-1: 0]      DATA,  
 input   wire [INSTR_WIDTH-1: 0]     Instr,
 input   wire [ADDRESS_WIDTH-1: 0]   PC_OUT, EPC_OUT,
 
@@ -16,7 +16,7 @@ input 	wire			CAUSE_EN, REG_WS,
 input	wire       		ALU_SEL1,CAUSE_SEL,SIGNEXT_SEL,
 input 	wire	[3:0]	ALU_CONTROL,
 
-output wire     [DATA_WIDTH-1:0] ALU_OUT, ALU_REG_OUT, Reg1_Out,
+output wire     [DATA_WIDTH-1:0] ALU_OUT, ALU_REG_OUT, Reg1_Out, Reg2_Out, 
 //outputs -->> control unit inputs
 output	wire		OF_OUT,BF_OUT,
 //outputs -->> Combinational Blcok outputs

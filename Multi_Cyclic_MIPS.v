@@ -5,7 +5,9 @@ module Multi_Cyclic_MIPS #(
     input wire CLK, RST,
 	input wire [INSTR_DATA_WIDTH-1:0] DATA,
 	output wire MEM_WS,
-	output wire [ADDRESS_WIDTH-1:0] Addr
+	output wire [1:0] RAM_SEL,
+	output wire [ADDRESS_WIDTH-1:0] Addr,
+	output wire [INSTR_DATA_WIDTH-1:0] Reg2_Out
 );
 
 	
@@ -25,7 +27,7 @@ module Multi_Cyclic_MIPS #(
     	.PC_LOAD(PC_LOAD)
     );
 
-	wire [1:0] Reg_Dest, RAM_SEL;
+	wire [1:0] Reg_Dest;
 	wire [2:0] REG_DATA_SEL, PC_SEL, ALU_OP, ALU_SEL2, MEMtoREG;
 	wire [INSTR_DATA_WIDTH-1:0] Instr;
 
@@ -104,6 +106,7 @@ module Multi_Cyclic_MIPS #(
 		.CLK(CLK),
 		.RST(RST),
 		.DATA(DATA),
+		.Reg2_Out(Reg2_Out),
 		.Instr(Instr),
 		.PC_OUT(PC_OUT),
 		.EPC_OUT(EPC_OUT),
