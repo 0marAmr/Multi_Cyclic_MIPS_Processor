@@ -234,14 +234,12 @@ module Sequence_Controller(
 						end
 						
 				endcase
-			end
-		
+		end
 		State2	:	begin
 				PC_EN = 1;
 				PC_SEL = 'b010;
 				next_state = State0;
 		end
-		
 		State3	:	begin
 				MEMtoREG = 'b101;
 				Reg_Dest ='b10;
@@ -265,14 +263,12 @@ module Sequence_Controller(
 					next_state=State5;
 				end
 		end
-
 		State5 : begin
 				Reg_Dest=2'b01;
 				MEMtoREG='b000; //المفروض يبقي دة يخليني اختار ال alu out regggggg
 				REG_WS=1;
 				next_state=State0;
 		end
-
 		State6:  begin
 			ALU_SEL1=1;
 			ALU_SEL2='b010;
@@ -281,7 +277,6 @@ module Sequence_Controller(
 			next_state=State8;
 
 		end
-
 		State7:  begin
 			ALU_SEL1=1;
 			ALU_SEL2='b010;
@@ -304,17 +299,13 @@ module Sequence_Controller(
 			end
 
 			endcase
-
 		end
-
 		State8: begin
 			Reg_Dest='b00;
-			MEMtoREG='b000; //المفروض يبقي دة يخليني اختار ال alu out regggggg
+			MEMtoREG='b000; 
 			REG_WS=1;
 			next_state=State0;
-
 		end
-
 		State9	:begin
 			ALU_SEL1 = 1;
 			ALU_SEL2 ='b000;
@@ -322,9 +313,7 @@ module Sequence_Controller(
 			next_state = State0;
 			PCWrite_BEQ = 1;
 			PC_SEL = 'b001;
-		
 		end
-
 		State10: begin
 			ALU_SEL1=1;
 			ALU_SEL2='b000;
@@ -333,7 +322,6 @@ module Sequence_Controller(
 			PC_SEL='b001;
 			next_state=State0;
 		end
-
 		State11: begin
 			ALU_SEL1=1;
 			ALU_SEL2='b100;
@@ -342,7 +330,6 @@ module Sequence_Controller(
 			PC_SEL='b001;
 			next_state=State0;
 		end
-
 		State12: begin
 			ALU_SEL1=1;
 			ALU_SEL2='b100;
@@ -351,7 +338,6 @@ module Sequence_Controller(
 			PC_SEL='b001;
 			next_state=State0;
 		end
-
 		State13: begin
 			ALU_SEL1=1;
 			ALU_SEL2='b100;
@@ -360,7 +346,6 @@ module Sequence_Controller(
 			PC_SEL='b001;
 			next_state=State0;
 		end
-
 		State14: begin
 			ALU_SEL1=1;
 			ALU_SEL2='b010;
@@ -368,41 +353,31 @@ module Sequence_Controller(
 			SIGNEXT_SEL=0;
 			next_state=State8;
 		end
-
-
 		State15	:	begin
 			ALU_SEL1 = 1;
 			ALU_SEL2 ='b010;
 			ALU_OP = 'b101;
 			next_state = State8;
 			SIGNEXT_SEL =0;
-		
 		end
-
 		State16	:	begin
 			ALU_SEL1 = 1;
 			ALU_SEL2 ='b010;
 			ALU_OP = 'b110;
 			next_state = State8;
 			SIGNEXT_SEL =0;
-		
 		end
-		
 		State17	:	begin
 			RAM_SEL = WW;
 			IorD='d1;
 			MEM_WS=1;
 			next_state = State0;
-		
 		end		
-		
 		State18	:	begin
 			MEM_OE='d1;
 			IorD='d1;
 			next_state = State19;
-		
 		end
-		
 		State19:  begin
 			Reg_Dest='b00;
 			MEMtoREG='b100;
@@ -428,16 +403,12 @@ module Sequence_Controller(
 			endcase
 			REG_WS=1;
 			next_state=State0; //fetch
-
 		end		
-		
 		State20:  begin
 			PC_EN=1;
 			PC_SEL='b011;
 			next_state=State0; //FETCH
-
 		end	
-		
 		State21:  begin
 			MEMtoREG='b101;
 			Reg_Dest='b10; //EDITED --- WRITE OVER $ra not Rd
@@ -446,82 +417,60 @@ module Sequence_Controller(
 			PC_SEL='b011;
 			REG_WS = 1;
 			next_state=State0; //FETCH
-
 		end
-		
 		State22:  begin
 			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
-
 		end
-
 		State23:  begin
 			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
-
 		end	
-
 		State24:  begin
 			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
-
 		end	
-
 		State25:  begin
 			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
-
 		end	
-
 		State26	:	begin
 			IorD='d1;
 			RAM_SEL=WB;
 			MEM_WS=1;
 			next_state = State0;
-		
 		end
-
 		State27	:	begin
 			IorD='d1;
 			RAM_SEL=WH;
 			MEM_WS=1;
 			next_state = State0;
-		
 		end			
-		
 		State28:  begin
 			ALU_SEL1='d1;
 			ALU_SEL2='b010;
 			ALU_OP='b011;
 			SIGNEXT_SEL='d1;
 			next_state=State8;
-
-
 		end			
-		
 		State29:  begin
 			ALU_SEL1='d1;
 			ALU_SEL2='b010;
 			ALU_OP='b000;
 			SIGNEXT_SEL='d1;
 			next_state=State8;
-
-
 		end	
-
 		State30:  begin
 			CAUSE_SEL='d0;
 			CAUSE_EN='d1;
 			EPC_EN='d1;
 			PC_SEL='b100;
 			next_state=State0; //fetch
-
 		end
-
 		State31:  begin
 			CAUSE_SEL='d1;
 			CAUSE_EN='d1;
@@ -529,23 +478,18 @@ module Sequence_Controller(
 			PC_SEL='b100;
 			next_state=State0; //fetch
 		end		
-
 		State32:  begin
 			MEMtoREG='b010;
 			Reg_Dest='b01; //EDITED --- WRITE OVER $ra not Rd
 			REG_WS=1;
 			next_state=State0; //fetch
-
 		end
-
 		State33:  begin
 			MEMtoREG='b011;
 			Reg_Dest='b01; //EDITED --- WRITE OVER $ra not Rd
 			REG_WS=1;			
 			next_state=State0; //fetch 
-
 		end		
-
 		default	:	begin		//invalid opcode
 			next_state = State31;
 		end
