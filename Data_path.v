@@ -34,6 +34,18 @@ localparam REG_FILE_ADDR_WIDTH =  5;
 ///////////////////// Reg File Write Data Logic ///////////////////
 ///////////////////////////////////////////////////////////////////
 
+
+/************ MDR reg ************/
+
+	wire [DATA_WIDTH-1: 0] MDR_DATA;	
+
+	register #(.width('d32)) MDR (
+		 .CLK(CLK), 
+		 .RST(RST), 
+		 .data_in(DATA), 
+		 .data_out(MDR_DATA)
+		 );
+
 /************ Byte sign extend ***********/
     wire [DATA_WIDTH-1: 0] EBZ1_Out;
 
@@ -41,7 +53,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .INPUT_WIDTH(BYTE),
         .OUTPUT_WIDTH(DATA_WIDTH)
     ) S_EXT_0_BYTE_MUX3 (
-        .in(DATA[BYTE-1:0]), 
+        .in(MDR_DATA[BYTE-1:0]), 
         .out_extend(EBZ1_Out)
     );
 
@@ -51,7 +63,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .INPUT_WIDTH(BYTE),
         .OUTPUT_WIDTH(DATA_WIDTH)
     ) S_EX_BYTE_MUX3 (
-        .in(DATA[BYTE-1:0]), 
+        .in(MDR_DATA[BYTE-1:0]), 
         .out_extend(EB2_Out)
     );	
 
@@ -62,7 +74,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .INPUT_WIDTH(HALF_WORD),
         .OUTPUT_WIDTH(DATA_WIDTH)
     ) S_EXT_0_HALF_WORD_MUX3 (
-        .in(DATA[15:0]), 
+        .in(MDR_DATA[HALF_WORD-1:0]), 
         .out_extend(EWZ1_Out)
         );
 
@@ -72,9 +84,10 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .INPUT_WIDTH(HALF_WORD),
         .OUTPUT_WIDTH(DATA_WIDTH)
     ) S_EX_HALF_WORD_MUX3 (
-        .in(DATA[HALF_WORD-1:0]), 
+        .in(MDR_DATA[HALF_WORD-1:0]), 
         .out_extend(EW2_Out)
     );	
+
 
 /************ Sign extension multiplexter ************/
     wire [DATA_WIDTH-1: 0] DATA_WIRE;
@@ -83,7 +96,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .WIDTH(DATA_WIDTH)
     ) MUX3 (
         .sel(REG_DATA_SEL), 
-        .in0(DATA), 
+        .in0(MDR_DATA), 
         .in1(EBZ1_Out), 
         .in2(EB2_Out), 
         .in3(EWZ1_Out), 
@@ -97,13 +110,13 @@ localparam REG_FILE_ADDR_WIDTH =  5;
 /************ Register File Write Data Multipexer ************/
     wire [DATA_WIDTH-1: 0] CAUSE_OUT;
     wire [DATA_WIDTH-1: 0] Reg_Write_Data;
-    wire [DATA_WIDTH-1: 0] ALU_OUT;
+  //  wire [DATA_WIDTH-1: 0] ALU_OUT; //commentted
 
     mux_8_to_1 #(
         .WIDTH(DATA_WIDTH)
     ) MUX5 (
         .sel(MEMtoREG), 
-        .in0(ALU_OUT), 
+        .in0(ALU_REG_OUT),  //edited
         .in1(Instr), 
         .in2(EPC_OUT), 
         .in3(CAUSE_OUT), 
@@ -123,7 +136,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .in0(Instr[20:16]), 
         .in1(Instr[15:11]), 
         .in2(5'd31), 
-        .in3(NC), 
+        .in3(5'd0), //NC 
         .out(Dest_Addr)
     );
 
@@ -148,8 +161,8 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .Reg2_Data(Reg2_Data)
     );	
 
-    wire [DATA_WIDTH-1: 0] Reg1_Out;
-    wire [DATA_WIDTH-1: 0] Reg2_Out;
+ //   wire [DATA_WIDTH-1: 0] Reg1_Out; ///commentted
+  //  wire [DATA_WIDTH-1: 0] Reg2_Out;
 
     register #(
         .width('d32)
@@ -274,8 +287,8 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .WIDTH(DATA_WIDTH)
     ) MUX9 (
         .sel(CAUSE_SEL), 
-        .in0(32'b0), 
-        .in1(32'b1), 
+        .in0('d0), 
+        .in1('d1), 
         .out(CAUSE_DATA)
     );	
 
