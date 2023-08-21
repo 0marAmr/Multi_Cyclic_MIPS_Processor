@@ -36,7 +36,7 @@ mux_2_to_1 #(
 ) MUX1 (
     .sel(IorD), 
     .in0(PC_OUT), 
-    .in1(ALU_OUT), 
+    .in1(ALU_REG_OUT),
     .out(Addr)      /*Addr is an input to the RAM in TOP module*/
     );    
 
