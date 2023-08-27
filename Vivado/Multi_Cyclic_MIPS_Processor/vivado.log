@@ -1,0 +1,384 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug 27 14:46:50 2023
+# Process ID: 22888
+# Current directory: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28752 F:\Digital_Track\04_STM_training\Multi_Cyclic_MIPS_Processor\Vivado\Multi_Cyclic_MIPS_Processor\Multi_Cyclic_MIPS_Processor.xpr
+# Log file: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/vivado.log
+# Journal file: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor\vivado.jou
+# Running On: Omars-PC, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17095 MB
+#-----------------------------------------------------------
+start_guioopen_project F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.xprWWARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not availableIINFO: [Project 1-313] Project file moved from 'F:/Digital_Track/04_STM_training/Vivado/Multi_Cyclic_MIPS_Processor' since last save.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.gen/sources_1'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Vivado/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not availableSScanning sources...FFinished scanning sourcesIINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specifiedIINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2022.2/data/ip'.open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1089.223 ; gain = 289.160
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Top_TB'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Vivado/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim/text.txt'
+INFO: [SIM-utils-43] Exported 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim/store_program.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arithmatic_Logic_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Combinational_Block
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Concatenate
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataPath
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Fetch_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multi_Cyclic_MIPS
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_FILE
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SH_L_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sequence_Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2_to_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4_to_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_8_to_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_en
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/TBs/Top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1147.594 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_TB_behav xil_defaultlib.Top_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_TB_behav xil_defaultlib.Top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v" Line 1. Module RAM doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v" Line 1. Module Multi_Cyclic_MIPS doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v" Line 1. Module Combinational_Block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v" Line 1. Module Sequence_Controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v" Line 1. Module ALU_Controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v" Line 1. Module Instruction_Fetch_Unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v" Line 1. Module Concatenate doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v" Line 1. Module DataPath doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v" Line 1. Module mux_4_to_1(WIDTH=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v" Line 1. Module REG_FILE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v" Line 1. Module SH_L_2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v" Line 1. Module Arithmatic_Logic_Unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v" Line 1. Module RAM doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v" Line 1. Module Multi_Cyclic_MIPS doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v" Line 1. Module Combinational_Block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v" Line 1. Module Sequence_Controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v" Line 1. Module ALU_Controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v" Line 1. Module Instruction_Fetch_Unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v" Line 1. Module Concatenate doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v" Line 1. Module DataPath doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v" Line 1. Module mux_4_to_1(WIDTH=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v" Line 1. Module REG_FILE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v" Line 1. Module SH_L_2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v" Line 1. Module Arithmatic_Logic_Unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.Combinational_Block
+Compiling module xil_defaultlib.Sequence_Controller
+Compiling module xil_defaultlib.ALU_Controller
+Compiling module xil_defaultlib.register_en
+Compiling module xil_defaultlib.mux_2_to_1
+Compiling module xil_defaultlib.Concatenate
+Compiling module xil_defaultlib.mux_8_to_1
+Compiling module xil_defaultlib.Instruction_Fetch_Unit
+Compiling module xil_defaultlib.register(width=32'b0100000)
+Compiling module xil_defaultlib.sign_extend_0_default
+Compiling module xil_defaultlib.sign_extend_default
+Compiling module xil_defaultlib.sign_extend_0(INPUT_WIDTH=16)
+Compiling module xil_defaultlib.sign_extend(INPUT_WIDTH=16)
+Compiling module xil_defaultlib.mux_4_to_1(WIDTH=5)
+Compiling module xil_defaultlib.REG_FILE
+Compiling module xil_defaultlib.SH_L_2
+Compiling module xil_defaultlib.Arithmatic_Logic_Unit
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.DataPath
+Compiling module xil_defaultlib.Multi_Cyclic_MIPS
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_TB_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 1147.594 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_TB_behav -key {Behavioral:sim_1:Functional:Top_TB} -tclbatch {Top_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Top_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 220 ns : File "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/TBs/Top_TB.v" Line 41
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:27 . Memory (MB): peak = 1170.305 ; gain = 22.711
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top Top [current_fileset]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: Top
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'NF_OUT', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:19]
+INFO: [Synth 8-11241] undeclared symbol 'ZF_OUT', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:20]
+INFO: [Synth 8-11241] undeclared symbol 'PCWrite_BLTZ', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:21]
+INFO: [Synth 8-11241] undeclared symbol 'PCWrite_BGTZ', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:22]
+INFO: [Synth 8-11241] undeclared symbol 'PCWrite_BLEZ', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:23]
+INFO: [Synth 8-11241] undeclared symbol 'PCWrite_BNE', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:24]
+INFO: [Synth 8-11241] undeclared symbol 'PCWrite_BEQ', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:25]
+INFO: [Synth 8-11241] undeclared symbol 'PC_EN', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:26]
+INFO: [Synth 8-11241] undeclared symbol 'PC_LOAD', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:27]
+INFO: [Synth 8-11241] undeclared symbol 'IR_EN', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:36]
+INFO: [Synth 8-11241] undeclared symbol 'MEM_OE', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:39]
+INFO: [Synth 8-11241] undeclared symbol 'IorD', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:41]
+INFO: [Synth 8-11241] undeclared symbol 'OF_OUT', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:48]
+INFO: [Synth 8-11241] undeclared symbol 'BF_OUT', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:49]
+INFO: [Synth 8-11241] undeclared symbol 'CAUSE_EN', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:55]
+INFO: [Synth 8-11241] undeclared symbol 'EPC_EN', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:56]
+INFO: [Synth 8-11241] undeclared symbol 'CAUSE_SEL', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:58]
+INFO: [Synth 8-11241] undeclared symbol 'ALU_SEL1', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:61]
+INFO: [Synth 8-11241] undeclared symbol 'SIGNEXT_SEL', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:62]
+INFO: [Synth 8-11241] undeclared symbol 'REG_WS', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:64]
+INFO: [Synth 8-11241] undeclared symbol 'REG_OE', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:65]
+INFO: [Synth 8-11241] undeclared symbol 'MEM_WS', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:18]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1916.551 ; gain = 401.828
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v:1]
+	Parameter PROGRAM bound to: text.txt - type: string 
+INFO: [Synth 8-3876] $readmem data file 'text.txt' is read successfully [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Multi_Cyclic_MIPS' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Combinational_Block' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Combinational_Block' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Sequence_Controller' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v:283]
+INFO: [Synth 8-6155] done synthesizing module 'Sequence_Controller' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Controller' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Controller' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_Fetch_Unit' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register_en' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_en' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Concatenate' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Concatenate' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_8_to_1' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_8_to_1' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Fetch_Unit' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DataPath' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend_0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+	Parameter INPUT_WIDTH bound to: 8 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+	Parameter INPUT_WIDTH bound to: 8 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend_0__parameterized0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+	Parameter INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_0__parameterized0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend__parameterized0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+	Parameter INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend__parameterized0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4_to_1' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v:1]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_4_to_1' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SH_L_2' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SH_L_2' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Arithmatic_Logic_Unit' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v:1]
+	Parameter OPERAND_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Arithmatic_Logic_Unit' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register__parameterized0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register__parameterized0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DataPath' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Multi_Cyclic_MIPS' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:1]
+WARNING: [Synth 8-4767] Trying to implement RAM 'memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Invalid write to RAM. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "memory_reg" dissolved into registers
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2231.941 ; gain = 717.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2240.527 ; gain = 725.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2240.527 ; gain = 725.805
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2247.855 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2368.062 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 2422.668 ; gain = 907.945
+72 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:01:02 . Memory (MB): peak = 2422.668 ; gain = 1252.363

@@ -1,0 +1,42 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arithmatic_Logic_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Combinational_Block
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Concatenate
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataPath
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Fetch_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multi_Cyclic_MIPS
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_FILE
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SH_L_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sequence_Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2_to_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4_to_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_8_to_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_en
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/TBs/Top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
