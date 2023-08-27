@@ -60,12 +60,6 @@ module RAM_TB;
         #10 $display("Instruction at address 0x%x is 0x%x", address, Output_Data);
     end
     endtask
-
-    // Load test program into memory
-    initial begin
-        $readmemh(PROGRAM, DUT.memory, INSTR_SEG_START_ADDR, INSTR_SEG_END_ADDR);
-    end
-
     // test vector generator
     initial begin
         initialize;

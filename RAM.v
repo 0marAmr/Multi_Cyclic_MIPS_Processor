@@ -1,8 +1,8 @@
 module RAM #(
 	parameter 	ADDRESS_WIDTH = 32,
 				INSTR_DATA_WIDTH = 32,
-				MEMORY_DEPTH = 2**8,
-				PROGRAM = "program.txt"
+				MEMORY_DEPTH = 2**10,
+				PROGRAM = "text.txt"
 )
 (
 input 	wire								CLK,
@@ -22,7 +22,7 @@ output	wire	[INSTR_DATA_WIDTH-1:0] 		Output_Data
 
 	/*Instruction Segment*/
 	localparam INSTR_SEG_START_ADDR = 0;
-	localparam INSTR_SEG_END_ADDR 	= 64;
+	localparam INSTR_SEG_END_ADDR 	= 128;
 
 	always @(posedge CLK)begin
 		 if(W_EN) begin
