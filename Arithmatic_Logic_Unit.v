@@ -104,6 +104,7 @@ BF_OUT = 'd0;
 				end	
 		default :begin
 				ALU_OUT = 'd0;
+				BF_OUT = 'b1;
 				end	
 				
 	endcase

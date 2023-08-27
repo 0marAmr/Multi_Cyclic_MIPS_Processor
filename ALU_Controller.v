@@ -26,22 +26,22 @@ always@(*)  begin
     
     casex (sel)
         /*Load word - Load byte - Load byte unsigned - Load half word */
-        'b000_???????: begin
+        'b000_xxxxxx: begin
             Out = add;
         end    
-        'b001???????: begin
+        'b001_xxxxxx: begin
             Out = subtract;
         end    
-        'b011_??????? : begin
+        'b011_xxxxxx : begin
             Out = Set_if_less_than;
         end
-        'b100_??????? : begin
+        'b100_xxxxxx : begin
             Out = AND;
         end    
-        'b101_??????? : begin
+        'b101_xxxxxx : begin
             Out = OR;
         end    
-        'b110_??????? : begin
+        'b110_xxxxxx : begin
             Out = XOR;
         end        
         'b010_001000 : begin /*Jump register*/
@@ -66,7 +66,7 @@ always@(*)  begin
             Out = AND;
         end                  
         'b010_100101 : begin /*Logical OR*/
-            Out = add;
+            Out = OR;
         end                  
         'b010_100110 : begin /*Logical XOR*/
             Out = XOR;
@@ -99,7 +99,7 @@ always@(*)  begin
             Out = Set_if_less_than;
         end    
         default: 
-            Out = Set_if_less_than;
+            Out = 'bxxxx;
     endcase
 end
 
