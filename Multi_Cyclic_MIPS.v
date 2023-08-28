@@ -14,6 +14,7 @@ module Multi_Cyclic_MIPS #(
 /////////////////////////////////////////////////////////////////////
 //////////////////////// Control Structures  ////////////////////////
 /////////////////////////////////////////////////////////////////////
+	wire	NF_OUT,ZF_OUT,PCWrite_BLTZ,PCWrite_BGTZ,PCWrite_BLEZ,PCWrite_BNE,PCWrite_BEQ,PC_EN,PC_LOAD;
 
     Combinational_Block CB (
     	.NF_OUT(NF_OUT), 
@@ -30,16 +31,29 @@ module Multi_Cyclic_MIPS #(
 	wire [1:0] Reg_Dest;
 	wire [2:0] REG_DATA_SEL, PC_SEL, ALU_OP, ALU_SEL2, MEMtoREG;
 	wire [INSTR_DATA_WIDTH-1:0] Instr;
+	wire [1:0] CAUSE_SEL;
+	wire EPC_SEL;
+	wire [4:0] Rs;
+	assign Rs = Instr[25:21] ; //RS[2]: third bit in RS 
+	wire			EPC_EN,CAUSE_EN,IR_EN,REG_WS;
+	wire       		IorD,ALU_SEL1,SIGNEXT_SEL;
+	wire	[3:0]	ALU_CONTROL;
+	wire			OF_OUT,BF_OUT;
+	wire			hi_SEL,hi_EN,lo_SEL,lo_EN;
 
     Sequence_Controller CONTROL_UNIT(
     	.Reg_Dest(Reg_Dest),
     	.IR_EN(IR_EN),
     	.REG_DATA_SEL(REG_DATA_SEL),
     	.MEM_WS(MEM_WS),
-    	.MEM_OE(MEM_OE),
     	.RAM_SEL(RAM_SEL),
     	.IorD(IorD),
     	.PC_EN(PC_EN),
+    	.Rs(Rs),
+    	.hi_SEL(hi_SEL),
+    	.lo_SEL(lo_SEL),
+    	.hi_EN(hi_EN),
+    	.lo_EN(lo_EN),
     	.PCWrite_BEQ(PCWrite_BEQ),
     	.PCWrite_BNE(PCWrite_BNE),
     	.PCWrite_BGTZ(PCWrite_BGTZ),
@@ -55,14 +69,14 @@ module Multi_Cyclic_MIPS #(
     	.CAUSE_EN(CAUSE_EN),
     	.EPC_EN(EPC_EN),
     	.PC_SEL(PC_SEL),
+    	.EPC_SEL(EPC_SEL),
     	.CAUSE_SEL(CAUSE_SEL),
     	.ALU_OP(ALU_OP),
     	.ALU_SEL2(ALU_SEL2),
     	.ALU_SEL1(ALU_SEL1),
     	.SIGNEXT_SEL(SIGNEXT_SEL),
     	.MEMtoREG(MEMtoREG),
-    	.REG_WS(REG_WS),
-    	.REG_OE(REG_OE)
+    	.REG_WS(REG_WS)
     	);
 
 	wire [3:0] ALU_CONTROL;
@@ -89,9 +103,11 @@ module Multi_Cyclic_MIPS #(
 		.IR_EN(IR_EN),
 		.EPC_EN(EPC_EN),
 		.PC_SEL(PC_SEL),
+		.EPC_SEL(EPC_SEL),
 		.ALU_OUT(ALU_OUT),
 		.ALU_REG_OUT(ALU_REG_OUT),
 		.Reg1_Out(Reg1_Out),
+		.Reg2_Out(Reg2_Out),
 		.RAM_OUT(DATA),
 		.Instr(Instr),
 		.Addr(Addr),
@@ -116,6 +132,10 @@ module Multi_Cyclic_MIPS #(
 		.Reg_Dest(Reg_Dest),
 		.CAUSE_EN(CAUSE_EN),
 		.REG_WS(REG_WS),
+    	.hi_SEL(hi_SEL),
+    	.lo_SEL(lo_SEL),
+    	.hi_EN(hi_EN),
+    	.lo_EN(lo_EN),
 		.ALU_SEL1(ALU_SEL1),
 		.CAUSE_SEL(CAUSE_SEL),
 		.SIGNEXT_SEL(SIGNEXT_SEL),

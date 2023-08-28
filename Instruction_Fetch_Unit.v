@@ -5,9 +5,9 @@ module Instruction_Fetch_Unit
                 DATA_WIDTH = 32
 )(
     input   wire                        CLK, RST,
-    input   wire                        PC_LOAD, IorD, IR_EN, EPC_EN,
+    input   wire                        PC_LOAD, IorD, IR_EN, EPC_EN,EPC_SEL,
     input   wire [2:0]                  PC_SEL,
-    input   wire [DATA_WIDTH-1:0]       ALU_OUT, ALU_REG_OUT, Reg1_Out,
+    input   wire [DATA_WIDTH-1:0]       ALU_OUT, ALU_REG_OUT, Reg1_Out,Reg2_Out,
     input   wire [ADDRESS_WIDTH-1:0]    RAM_OUT,                /*Instruction From RAM*/
     output  wire [ADDRESS_WIDTH-1:0]    Instr, 
     output  wire [ADDRESS_WIDTH-1:0]    Addr, PC_OUT, EPC_OUT
@@ -86,6 +86,7 @@ mux_8_to_1 #(
 /////////////////////////////////////////////////////////////
 /////////////////////// EPC Register ////////////////////////
 /////////////////////////////////////////////////////////////
+wire [DATA_WIDTH-1:0] EPC_IN;
 
 register_en #(
     .width(ADDRESS_WIDTH)
@@ -93,8 +94,17 @@ register_en #(
     .CLK(CLK),
     .RST(RST),
     .EN(EPC_EN),
-    .data_in(PC_OUT),
+    .data_in(EPC_IN),
     .data_out(EPC_OUT)
 );
+
+mux_2_to_1 #(
+    .WIDTH(ADDRESS_WIDTH)
+) MUX11 (
+    .sel(EPC_SEL), 
+    .in0(PC_OUT), 
+    .in1(Reg2_Out),	//rt data
+    .out(EPC_IN)      
+    );   
 
 endmodule

@@ -11,11 +11,11 @@ input   wire [ADDRESS_WIDTH-1: 0]   PC_OUT, EPC_OUT,
 
 /*Control Signals*/
 input	wire    [2:0]	REG_DATA_SEL, MEMtoREG, ALU_SEL2,	
-input	wire 	[1:0] 	Reg_Dest,
+input	wire 	[1:0] 	Reg_Dest,CAUSE_SEL,
 input 	wire			CAUSE_EN, REG_WS,
-input	wire       		ALU_SEL1,CAUSE_SEL,SIGNEXT_SEL,
+input	wire       		ALU_SEL1,SIGNEXT_SEL,
 input 	wire	[3:0]	ALU_CONTROL,
-
+input	wire			hi_SEL,hi_EN,lo_SEL,lo_EN,
 output wire     [DATA_WIDTH-1:0] ALU_OUT, ALU_REG_OUT, Reg1_Out, Reg2_Out, 
 //outputs -->> control unit inputs
 output	wire		OF_OUT,BF_OUT,
@@ -122,8 +122,8 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .in3(CAUSE_OUT), 
         .in4(DATA_WIRE), 
         .in5(PC_OUT), 
-        .in6(NC), 
-        .in7(NC), 
+        .in6(hi_out), 
+        .in7(lo_out), 
         .out(Reg_Write_Data)
     );
 
@@ -133,8 +133,8 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .WIDTH(REG_FILE_ADDR_WIDTH)
     ) MUX4 (
         .sel(Reg_Dest), 
-        .in0(Instr[20:16]), 
-        .in1(Instr[15:11]), 
+        .in0(Instr[20:16]),  //rt
+        .in1(Instr[15:11]),  //rd
         .in2(5'd31), 
         .in3(5'd0), //NC 
         .out(Dest_Addr)
@@ -283,12 +283,14 @@ localparam REG_FILE_ADDR_WIDTH =  5;
 /////////////////////////////////////////////////////////////
 
     wire [DATA_WIDTH-1: 0] CAUSE_DATA;
-    mux_2_to_1 #(
+    mux_4_to_1 #(
         .WIDTH(DATA_WIDTH)
     ) MUX9 (
         .sel(CAUSE_SEL), 
         .in0('d0), 
         .in1('d1), 
+        .in2(Reg2_Out), //rt data
+        .in3(NC), 
         .out(CAUSE_DATA)
     );	
 
@@ -302,5 +304,49 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .data_out(CAUSE_OUT)
     );	
 
+/////////////////////////////////////////////////////////////
+///////////////////// hi && lo ///////////////////////
+/////////////////////////////////////////////////////////////
+
+    wire [DATA_WIDTH-1: 0] hi_data,lo_data,hi_out,lo_out;
+    mux_2_to_1 #(
+        .WIDTH(DATA_WIDTH)
+    ) MUX12 (
+        .sel(hi_SEL), 
+        .in0(Reg1_Data), 
+        .in1(NC),   //should be most 32bits of multiplier output
+        .out(hi_data)
+    );
+
+    mux_2_to_1 #(
+        .WIDTH(DATA_WIDTH)
+    ) MUX13 (
+        .sel(lo_SEL), 
+        .in0(Reg1_Data), 
+        .in1(NC),   //should be least 32bits of multiplier output
+        .out(lo_data)
+    );	
+
+    register_en #(
+        .width(DATA_WIDTH)
+    ) hi (
+        .CLK(CLK), 
+        .RST(RST), 
+        .EN(hi_EN),
+        .data_in(hi_data), 
+        .data_out(hi_out)
+    );
+	
+    register_en #(
+        .width(DATA_WIDTH)
+    ) lo (
+        .CLK(CLK), 
+        .RST(RST), 
+        .EN(lo_EN_EN),
+        .data_in(lo_data_data), 
+        .data_out(lo_out)
+    );	
 
 endmodule
+
+EPC_OUT

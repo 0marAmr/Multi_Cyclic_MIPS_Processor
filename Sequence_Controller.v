@@ -2,28 +2,26 @@ module Sequence_Controller(
 	input 				OF_OUT,BF_OUT,		//‘OF_OUT’ and ‘BF_OUT’ are direct outputs of the ALU and indicate when a processor exception has occurred. 
 											//OF_OUT is set true when an arithmetic overflow has occurred. BF_OUT is set true when an invalid operation is detected
 	input 	[5:0] 		Funct,Opcode,		// opcode :determines the instruction type once it is fetched
-	input 	[4:0] 		Rd,
+	input 	[4:0] 		Rd,Rs,
 	input 				CLK,
 	input				RST,
-	
+	output	reg			hi_SEL,hi_EN,lo_SEL,lo_EN,
 	output 	reg 		PC_EN,				//Enables writing to the Program Counter
 	output 	reg [2:0] 	PC_SEL,				//Determines the data source for the Program Counter
 	output 	reg			IorD,				//Determines the address source for memory 
-	output 	reg			MEM_OE,				//Enables reads from memory
 	output 	reg			MEM_WS,				//Enables writes to memory
 	output 	reg	[2:0]	REG_DATA_SEL,		//Determines the source of data to be written to the Instruction Register (IR)
 	output 	reg			IR_EN,				//Enables writes to the IR
 	output	reg	[1:0]	Reg_Dest,			//Determines the address of a register in Register File to be written to
 	output	reg [2:0]	MEMtoREG,			//Determines the source of data to be written to the Register File
-	output	reg			REG_OE,				//Enables reads from the Resister File
 	output	reg			REG_WS,				//Enables writes to the register file
 	output	reg			SIGNEXT_SEL,		//Selects between immediate data sign extended with 0’s,
 											//  in the case of an unsigned operation, and data sign extended with the MSB, which is used for signed operations
 	output	reg			ALU_SEL1,			//Selects the ALU data source for the first operand 
 	output	reg	[2:0]	ALU_SEL2,			//Selects the ALU data source for the second operand
 	output	reg	[2:0]	ALU_OP,				//Determines the operation to be performed by the ALU
-	output	reg			EPC_EN,				//Enables writes to the EPC register	
-	output	reg			CAUSE_SEL,			//Determines whether the Cause register will be loaded with 0 or 1
+	output	reg			EPC_SEL,EPC_EN,		//Enables writes to the EPC register	
+	output	reg	[1:0]	CAUSE_SEL,			//Determines whether the Cause register will be loaded with 0 or 1
 	output	reg			CAUSE_EN,			//Enables writes to the Cause register
 	output	reg			PCWrite_BEQ,		//Enables ‘branch if equal’ operation 
 	output	reg			PCWrite_BNE,		//Enables ‘branch if not equal’ operation
@@ -72,12 +70,12 @@ module Sequence_Controller(
 							State35='d35,
 							State36='d36;
 
-	///////////////////////different op codes parameters //////////////////////////
+	///////////////////////different op code parameters //////////////////////////
 
 	localparam 		[5:0]	OP_J      = 6'b000010,
 							OP_JAL	  = 6'b000011,
 							OP_R_TYPE = 6'b000000,
-							OP_MFC0   = 6'b010000,
+							OP_M_F_T_C0   = 6'b010000,
 							OP_BLTZ   = 6'b000001,
 							OP_BEQ 	  = 6'b000100,
 							OP_BNE    = 6'b000101,
@@ -97,7 +95,8 @@ module Sequence_Controller(
 							OP_LH     = 6'b100001,
 							OP_SB     = 6'b101000,
 							OP_SH     = 6'b101001,
-							OP_SW     = 6'b101011;
+							OP_SW     = 6'b101011,
+							OP_MUL    = 6'b011100;
 
 	localparam      [1:0] 	WW=2'b00, 		//mem wrire word
 							WH=2'b01, 		//mem write half-word
@@ -121,19 +120,18 @@ module Sequence_Controller(
 	PC_EN			= 'd0;				
 	PC_SEL          = 'd0;	
 	IorD			= 'd1;
-	MEM_OE			= 'd0;
 	MEM_WS			= 'd0;
 	REG_DATA_SEL	= 'd0;	
 	IR_EN			= 'd0;	
 	Reg_Dest		= 'd0;	
 	MEMtoREG		= 'd0;	
-	REG_OE			= 'd0;
 	REG_WS			= 'd0;
 	SIGNEXT_SEL		= 'd0;										
 	ALU_SEL1		= 'd0;	 
 	ALU_SEL2		= 'd0;	
 	ALU_OP			= 'd0;
-	EPC_EN			= 'd0;	
+	EPC_EN			= 'd0;
+	EPC_SEL			= 'd0;
 	CAUSE_SEL		= 'd0;	
 	CAUSE_EN		= 'd0;	
 	PCWrite_BEQ		= 'd0;
@@ -143,14 +141,16 @@ module Sequence_Controller(
 	PCWrite_BLEZ    = 'd0;
 	RAM_SEL			= 'd0;
 	next_state		= State0;
+	hi_SEL			= 'd0;
+	hi_EN 			= 'd0;
+	lo_SEL			= 'd0;
+	lo_EN 			= 'd0;		
 
 	case(current_state) 
 		State0	: 	begin			// FETCH
-				MEM_OE = 1;
 				IorD = 0;
 				IR_EN = 1;
 			//	REG_DATA_SEL = 'b000;
-				REG_OE = 1;
 				ALU_SEL1 = 0;
 				ALU_SEL2 = 'b001;
 				ALU_OP = 'b000;
@@ -160,7 +160,6 @@ module Sequence_Controller(
 		end
 		
 		State1	:	begin			// DECODE
-				MEM_OE = 0;
 				SIGNEXT_SEL = 0;
 				ALU_SEL1 = 0;
 				ALU_SEL2 = 'b011;
@@ -193,13 +192,16 @@ module Sequence_Controller(
 						OP_ADDi	:	begin			//ADDiu
 							next_state = State29; 
 						end
-						OP_MFC0	:	begin			//MFC0
-							if(Rd=='b01101)
-								next_state = State33;
-							else if(Rd=='b01110)
+						OP_M_F_T_C0	:	begin			//MFC0_MTC0
+							if(Rs=='d4 && (Rd=='b01101 || Rd=='b01110))begin 			//MTC0 -->> CAUSE OR EPC, SINCE THEY ARE THE ONLY CO-PROCESSOR_0 REGISTERS EXISTING 
+								next_state = State34;
+							end
+							else if(Rs=='d0 && (Rd=='b01101 || Rd=='b01110))begin			//MFC0
 								next_state = State32;
-							else						//various I type
-								next_state = State7;
+							end
+							else begin						
+								next_state = State0;  //invalid
+							end
 						end
 						OP_BLTZ	:	begin			//BLTZ
 							next_state = State13; 
@@ -209,12 +211,42 @@ module Sequence_Controller(
 						end
 						
 						OP_R_TYPE	:	begin			//R type
-							if(Funct=='b001001)
-								next_state = State21;	//JALR
-							else if(Funct=='b001000)
-								next_state = State20;
-							else
-								next_state = State4;
+							case(Funct)
+								'b001001:	begin
+									next_state = State21;	//JALR
+								end
+								'b001000:	begin
+									next_state = State20;   //JR
+								end
+								'b010000:	begin			//mfhi
+									Reg_Dest=2'b01;
+									MEMtoREG='b110; 
+									REG_WS=1;
+									next_state = State0;  //fetch
+								end
+								'b010001:	begin			//mthi
+									hi_SEL = 'd0;
+									hi_EN = 'd1;
+									next_state = State0;  //fetch
+								end
+								'b010010:	begin		  //mflo
+									Reg_Dest=2'b01;
+									MEMtoREG='b111; 
+									REG_WS=1;
+									next_state = State0;  //fetch
+
+								end
+								'b010011:	begin		  //mtlo
+									lo_SEL = 'd0;
+									lo_EN = 'd1;
+									next_state = State0;  //fetch
+								end
+								default:	begin
+									next_state = State4;   //other R-type
+								end
+								
+							endcase
+
 						end
 						
 						OP_BLEZ	:	begin			//BLEZ
@@ -227,8 +259,8 @@ module Sequence_Controller(
 							next_state = State6; 
 						end
 						
-						default		:	begin		//various I type
-							next_state = State7;
+						default		:	begin		//invalid instaruction or unconsidered one
+							next_state = State0;
 						end
 						
 				endcase
@@ -372,7 +404,6 @@ module Sequence_Controller(
 			next_state = State0;
 		end		
 		State18	:	begin
-			MEM_OE='d1;
 			IorD='d1;
 			next_state = State19;
 		end
@@ -417,22 +448,18 @@ module Sequence_Controller(
 			next_state=State0; //FETCH
 		end
 		State22:  begin
-			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
 		end
 		State23:  begin
-			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
 		end	
 		State24:  begin
-			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
 		end	
 		State25:  begin
-			MEM_OE='d1;
 			IorD='d1;
 			next_state=State19; 
 		end	
@@ -465,6 +492,7 @@ module Sequence_Controller(
 		State30:  begin
 			CAUSE_SEL='d0;
 			CAUSE_EN='d1;
+			EPC_SEL = 'd0;
 			EPC_EN='d1;
 			PC_SEL='b100;
 			next_state=State0; //fetch
@@ -472,22 +500,45 @@ module Sequence_Controller(
 		State31:  begin
 			CAUSE_SEL='d1;
 			CAUSE_EN='d1;
+			EPC_SEL='d0;
 			EPC_EN='d1;
 			PC_SEL='b100;
 			next_state=State0; //fetch
 		end		
 		State32:  begin
-			MEMtoREG='b010;
-			Reg_Dest='b01; //EDITED --- WRITE OVER $ra not Rd
+			Reg_Dest='b00; //EDITED --- WRITE OVER $rt not Rd
 			REG_WS=1;
+			if(Rd=='b01101)		//CAUSE
+				MEMtoREG='b011;
+			else				//EPC
+				MEMtoREG='b010;
 			next_state=State0; //fetch
+
 		end
-		State33:  begin
+		State33:  begin  /////////////////////////////////////////////not used////////////////////////////////////////////
 			MEMtoREG='b011;
-			Reg_Dest='b01; //EDITED --- WRITE OVER $ra not Rd
+			Reg_Dest='b00; //EDITED --- WRITE OVER $rt not Rd
 			REG_WS=1;			
 			next_state=State0; //fetch 
+		end	
+		State34:  begin
+			CAUSE_SEL='d2;
+			EPC_SEL='d1;
+			if(Rd=='b01101)begin    //CAUSE
+				CAUSE_EN='d1;
+				EPC_EN='d0;
+			end
+			else begin		  //EPC
+				CAUSE_EN='d0;
+				EPC_EN='d1;
+			end
+			next_state=State0; //fetch
 		end		
+		State35:  begin ////////////////////////////////////////// not used /////////////////////////////////////
+			EPC_SEL='d1;
+			EPC_EN='d1;
+			next_state=State0; //fetch
+		end
 		default	:	begin		//invalid opcode
 			next_state = State31;
 		end
