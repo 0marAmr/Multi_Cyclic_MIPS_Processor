@@ -6,11 +6,14 @@ input 	wire	[OPERAND_WIDTH-1:0] Operand1,Operand2,
 //control signals
 input	wire	[3:0]					Cntrl,
 input 	wire	[4:0]					Shamt,
+input 	wire							mult_start,div_start
 //data out
-output	reg  	[OPERAND_WIDTH-1:0]		ALU_OUT,
+output	reg  	[OPERAND_WIDTH-1:0]		ALU_OUT,ALU_OUT2,
 //flags
-output	reg							NF_OUT,ZF_OUT,OF_OUT,BF_OUT
+output	reg							NF_OUT,ZF_OUT,OF_OUT,BF_OUT,mult_div_done
 );
+
+
 
 localparam 	[3:0]	AND		= 4'b0000,
 					OR		= 4'b0001,
@@ -25,7 +28,9 @@ localparam 	[3:0]	AND		= 4'b0000,
 					SRL     = 4'b1010,
 					SRLV    = 4'b1011,
 					SRA     = 4'b1100,
-					SRAV   = 4'b1101;
+					SRAV   = 4'b1101,
+					MULT = 'b1110,
+					DIV = 'b1111;
 					
 wire 	[OPERAND_WIDTH-1:0]  OP1_U,OP2_U,OP2_TEMP;
 
@@ -36,7 +41,8 @@ assign 	OP2_TEMP = (~Operand2)+'d1; //2's complement
 always @(*)begin
 OF_OUT = 'd0;
 BF_OUT = 'd0;
-	
+ALU_OUT2='d0;
+mult_div_done='d0;	
 	case(Cntrl)
 		AND 	:begin
 				ALU_OUT = Operand1 & Operand2;
@@ -102,6 +108,16 @@ BF_OUT = 'd0;
 		SRAV 	:begin
 				ALU_OUT = Operand2 >>> Operand1;
 				end	
+		MULT 	:begin
+				ALU_OUT = // first 32 bits of multiplier module result 
+				ALU_OUT2= // last 32 bits of multiplier module result 
+				mult_div_done= //done output of multiplier module
+				end	
+		DIV 	:begin
+				ALU_OUT = //  first 32 bits of divider module result 
+				ALU_OUT2= // last 32 bits of divider module result 
+				mult_div_done= //done output of divider module
+				end					
 		default :begin
 				ALU_OUT = 'd0;
 				BF_OUT = 'b1;

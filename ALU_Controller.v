@@ -18,7 +18,9 @@ module ALU_Controller (
                     Shift_right_logic = 'b1010,
                     Shift_right_logic_by_var = 'b1011,
                     Shift_right_arith = 'b1100,
-                    Shift_right_arith_by_var = 'b1101;
+                    Shift_right_arith_by_var = 'b1101,
+					MULT = 'b1110,
+					DIV = 'b1111;
 
     wire [8:0] sel;
     assign sel = {ctrl,Funct};
@@ -43,7 +45,10 @@ always@(*)  begin
         end    
         'b110_xxxxxx : begin
             Out = XOR;
-        end        
+        end  
+        'b111_xxxxxx : begin
+            Out = MULT;
+        end  		
         'b010_001000 : begin /*Jump register*/
             Out = 4'bxxxx;
         end           
@@ -97,7 +102,13 @@ always@(*)  begin
         end                   
         'b010_101010 : begin /*Set-if-less-than*/
             Out = Set_if_less_than;
-        end    
+        end
+        'b010_011000 : begin 
+            Out = MULT;
+        end
+        'b010_011010 : begin 
+            Out = DIV;
+        end		
         default: 
             Out = 'bxxxx;
     endcase

@@ -40,6 +40,8 @@ module Multi_Cyclic_MIPS #(
 	wire	[3:0]	ALU_CONTROL;
 	wire			OF_OUT,BF_OUT;
 	wire			hi_SEL,hi_EN,lo_SEL,lo_EN;
+	
+
 
     Sequence_Controller CONTROL_UNIT(
     	.Reg_Dest(Reg_Dest),
@@ -54,6 +56,9 @@ module Multi_Cyclic_MIPS #(
     	.lo_SEL(lo_SEL),
     	.hi_EN(hi_EN),
     	.lo_EN(lo_EN),
+		.mult_start(mult_start),
+		.div_start(div_start),
+		.mult_div_done(mult_div_done),
     	.PCWrite_BEQ(PCWrite_BEQ),
     	.PCWrite_BNE(PCWrite_BNE),
     	.PCWrite_BGTZ(PCWrite_BGTZ),
@@ -136,6 +141,9 @@ module Multi_Cyclic_MIPS #(
     	.lo_SEL(lo_SEL),
     	.hi_EN(hi_EN),
     	.lo_EN(lo_EN),
+		.mult_start(mult_start),
+		.div_start(div_start),
+		.mult_div_done(mult_div_done),
 		.ALU_SEL1(ALU_SEL1),
 		.CAUSE_SEL(CAUSE_SEL),
 		.SIGNEXT_SEL(SIGNEXT_SEL),

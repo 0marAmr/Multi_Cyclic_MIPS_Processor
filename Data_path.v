@@ -13,17 +13,19 @@ input   wire [ADDRESS_WIDTH-1: 0]   PC_OUT, EPC_OUT,
 input	wire    [2:0]	REG_DATA_SEL, MEMtoREG, ALU_SEL2,	
 input	wire 	[1:0] 	Reg_Dest,CAUSE_SEL,
 input 	wire			CAUSE_EN, REG_WS,
-input	wire       		ALU_SEL1,SIGNEXT_SEL,
+input	wire       		ALU_SEL1,SIGNEXT_SEL,mult_start,div_start,
 input 	wire	[3:0]	ALU_CONTROL,
 input	wire			hi_SEL,hi_EN,lo_SEL,lo_EN,
 output wire     [DATA_WIDTH-1:0] ALU_OUT, ALU_REG_OUT, Reg1_Out, Reg2_Out, 
 //outputs -->> control unit inputs
-output	wire		OF_OUT,BF_OUT,
+output	wire		OF_OUT,BF_OUT,mult_div_done,
 //outputs -->> Combinational Blcok outputs
 output  wire        NF_OUT, ZF_OUT
 
 
 );
+
+
 
 localparam NC                  =  0;
 localparam BYTE                =  8;
@@ -111,6 +113,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
     wire [DATA_WIDTH-1: 0] CAUSE_OUT;
     wire [DATA_WIDTH-1: 0] Reg_Write_Data;
   //  wire [DATA_WIDTH-1: 0] ALU_OUT; //commentted
+  
 
     mux_8_to_1 #(
         .WIDTH(DATA_WIDTH)
@@ -254,7 +257,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
 ///////////////////////////////////////////////////////////////
 ///////////////////////// ALU & ALU REG ///////////////////////
 ///////////////////////////////////////////////////////////////
-
+	wire [DATA_WIDTH-1: 0] ALU_OUT2,ALU_REG_OUT2;
     Arithmatic_Logic_Unit #(
         .OPERAND_WIDTH(DATA_WIDTH)
     ) ALU (
@@ -263,6 +266,10 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .Cntrl(ALU_CONTROL), 
         .Shamt(Instr[10:6]), 
         .ALU_OUT(ALU_OUT), 
+        .ALU_OUT2(ALU_OUT2),
+		.mult_start(mult_start),
+		.div_start(div_start),
+		.mult_div_done(mult_div_done),
         .NF_OUT(NF_OUT), 
         .ZF_OUT(ZF_OUT), 
         .OF_OUT(OF_OUT), 
@@ -277,6 +284,15 @@ localparam REG_FILE_ADDR_WIDTH =  5;
         .data_in(ALU_OUT), 
         .data_out(ALU_REG_OUT)
     );
+	
+    register #(
+        .width(DATA_WIDTH)
+    ) ALU_Register_2 (
+        .CLK(CLK), 
+        .RST(RST), 
+        .data_in(ALU_OUT2), 
+        .data_out(ALU_REG_OUT2)
+    );	
 
 /////////////////////////////////////////////////////////////
 ///////////////////// Exception Cause ///////////////////////
@@ -314,7 +330,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
     ) MUX12 (
         .sel(hi_SEL), 
         .in0(Reg1_Data), 
-        .in1(NC),   //should be most 32bits of multiplier output
+        .in1(ALU_REG_OUT2),   //should be most 32bits of multiplier output
         .out(hi_data)
     );
 
@@ -323,7 +339,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
     ) MUX13 (
         .sel(lo_SEL), 
         .in0(Reg1_Data), 
-        .in1(NC),   //should be least 32bits of multiplier output
+        .in1(ALU_REG_OUT),   //should be least 32bits of multiplier output
         .out(lo_data)
     );	
 

@@ -4,7 +4,7 @@ module Sequence_Controller(
 	input 	[5:0] 		Funct,Opcode,		// opcode :determines the instruction type once it is fetched
 	input 	[4:0] 		Rd,Rs,
 	input 				CLK,
-	input				RST,
+	input				RST,mult_div_done,
 	output	reg			hi_SEL,hi_EN,lo_SEL,lo_EN,
 	output 	reg 		PC_EN,				//Enables writing to the Program Counter
 	output 	reg [2:0] 	PC_SEL,				//Determines the data source for the Program Counter
@@ -28,8 +28,11 @@ module Sequence_Controller(
 	output	reg			PCWrite_BGTZ,		//Enables ‘branch if greater than zero’ operation
 	output	reg			PCWrite_BLTZ,		//Enables ‘branch if less than zero’ operation
 	output	reg			PCWrite_BLEZ,		//Enables ‘branch if less than or equal to zero’ operation
-	output	reg	[1:0]	RAM_SEL				//to choose whether to store a word, half-word or a byte in memory
+	output	reg	[1:0]	RAM_SEL	,			//to choose whether to store a word, half-word or a byte in memory
+	output	reg			mult_start,div_start
 );
+
+
 
 	/*	states	*/
 	localparam		[5:0]	State0='d0,
@@ -68,7 +71,8 @@ module Sequence_Controller(
 							State33='d33,
 							State34='d34,
 							State35='d35,
-							State36='d36;
+							State36='d36,
+							State37='d37;
 
 	///////////////////////different op code parameters //////////////////////////
 
@@ -144,8 +148,9 @@ module Sequence_Controller(
 	hi_SEL			= 'd0;
 	hi_EN 			= 'd0;
 	lo_SEL			= 'd0;
-	lo_EN 			= 'd0;		
-
+	lo_EN 			= 'd0;	
+	mult_start		= 'd0;
+	div_start		= 'd0;
 	case(current_state) 
 		State0	: 	begin			// FETCH
 				IorD = 0;
@@ -200,7 +205,7 @@ module Sequence_Controller(
 								next_state = State32;
 							end
 							else begin						
-								next_state = State0;  //invalid
+								next_state = State0;  //invalid///////////////////////////////////////////
 							end
 						end
 						OP_BLTZ	:	begin			//BLTZ
@@ -241,6 +246,14 @@ module Sequence_Controller(
 									lo_EN = 'd1;
 									next_state = State0;  //fetch
 								end
+								'b011000:	begin	//mult	  
+									next_state = State36;
+									mult_start='d1;
+								end
+								'b011010:	begin	//div	  
+									next_state = State36;
+									div_start='d1;
+								end								
 								default:	begin
 									next_state = State4;   //other R-type
 								end
@@ -258,12 +271,21 @@ module Sequence_Controller(
 						OP_SLTi	:	begin			//SLTi
 							next_state = State6; 
 						end
-						
-						default		:	begin		//invalid instaruction or unconsidered one
+						OP_MUL	:	begin			//MUL
+							if(Funct=='d2)begin
+								next_state = State33;
+								mult_start='d1;
+							end
+							else begin
+								next_state = State0;  //invalid instruction
+								mult_start='d0;
+							end
+						end
+						default		:	begin		//invalid instaruction or unconsidered one////////////////////////////////////////////
 							next_state = State0;
 						end
 						
-				endcase
+				endcase  
 		end
 		State2	:	begin
 				PC_EN = 1;
@@ -289,7 +311,7 @@ module Sequence_Controller(
 				begin
 					next_state=State30;
 				end
-				else begin
+				else begin  
 					next_state=State5;
 				end
 		end
@@ -328,7 +350,7 @@ module Sequence_Controller(
 					next_state=State8;
 			end
 
-			endcase
+			endcase  
 		end
 		State8: begin
 			Reg_Dest='b00;
@@ -360,7 +382,7 @@ module Sequence_Controller(
 			PC_SEL='b001;
 			next_state=State0;
 		end
-		State12: begin
+		State12: begin  
 			ALU_SEL1=1;
 			ALU_SEL2='b100;
 			ALU_OP='b001;
@@ -395,7 +417,7 @@ module Sequence_Controller(
 			ALU_SEL2 ='b010;
 			ALU_OP = 'b110;
 			next_state = State8;
-			SIGNEXT_SEL =0;
+			SIGNEXT_SEL =0;  
 		end
 		State17	:	begin
 			RAM_SEL = WW;
@@ -431,7 +453,7 @@ module Sequence_Controller(
 						end
 			endcase
 			REG_WS=1;
-			next_state=State0; //fetch
+			next_state=State0; //fetch  
 		end		
 		State20:  begin
 			PC_EN=1;
@@ -515,11 +537,12 @@ module Sequence_Controller(
 			next_state=State0; //fetch
 
 		end
-		State33:  begin  /////////////////////////////////////////////not used////////////////////////////////////////////
-			MEMtoREG='b011;
-			Reg_Dest='b00; //EDITED --- WRITE OVER $rt not Rd
-			REG_WS=1;			
-			next_state=State0; //fetch 
+		State33:  begin 
+			ALU_OP=3'b111;
+			if(mult_div_done)
+				next_state=State35;
+			else
+				next_state=State33;
 		end	
 		State34:  begin
 			CAUSE_SEL='d2;
@@ -534,11 +557,26 @@ module Sequence_Controller(
 			end
 			next_state=State0; //fetch
 		end		
-		State35:  begin ////////////////////////////////////////// not used /////////////////////////////////////
-			EPC_SEL='d1;
-			EPC_EN='d1;
+		State35:  begin 
+			Reg_Dest=2'b01;
+			MEMtoREG='b000; 
+			REG_WS=1;
 			next_state=State0; //fetch
 		end
+		State36:  begin 
+			ALU_OP=3'b010;
+			if(mult_div_done)
+				next_state=State37;
+			else
+				next_state=State36;
+		end	
+		State37:  begin 
+			lo_SEL = 'd1;
+			lo_EN = 'd1;
+			hi_SEL = 'd1;
+			hi_EN = 'd1;
+			next_state=State0; //fetch
+		end			
 		default	:	begin		//invalid opcode
 			next_state = State31;
 		end
