@@ -112,11 +112,13 @@ mult_div_done='d0;
 				ALU_OUT = // first 32 bits of multiplier module result 
 				ALU_OUT2= // last 32 bits of multiplier module result 
 				mult_div_done= //done output of multiplier module
+				OF_OUT = ///////
 				end	
 		DIV 	:begin
 				ALU_OUT = //  first 32 bits of divider module result 
 				ALU_OUT2= // last 32 bits of divider module result 
 				mult_div_done= //done output of divider module
+				OF_OUT = ///////
 				end					
 		default :begin
 				ALU_OUT = 'd0;

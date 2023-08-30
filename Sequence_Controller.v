@@ -205,7 +205,7 @@ module Sequence_Controller(
 								next_state = State32;
 							end
 							else begin						
-								next_state = State0;  //invalid///////////////////////////////////////////
+								next_state = State0;  //// other co-processor_0 instructions that are not handled yet, so we are back to fetch
 							end
 						end
 						OP_BLTZ	:	begin			//BLTZ
@@ -277,12 +277,12 @@ module Sequence_Controller(
 								mult_start='d1;
 							end
 							else begin
-								next_state = State0;  //invalid instruction
+								next_state = State31;  //invalid instruction
 								mult_start='d0;
 							end
 						end
-						default		:	begin		//invalid instaruction or unconsidered one////////////////////////////////////////////
-							next_state = State0;
+						default		:	begin		//other I-type 
+							next_state = State7;
 						end
 						
 				endcase  
@@ -305,11 +305,11 @@ module Sequence_Controller(
 				ALU_SEL2=3'b000;
 				ALU_OP=3'b010;
 				if(BF_OUT==1)begin
-					next_state=State31;
+					next_state=State31;  //invalid istruction exception
 				end
-				else if(BF_OUT==0&&OF_OUT==1&&Funct[0]==1)
+				else if(BF_OUT==0&&OF_OUT==1&&Funct[0]==1)  
 				begin
-					next_state=State30;
+					next_state=State30;   //over_flow exception
 				end
 				else begin  
 					next_state=State5;
@@ -317,7 +317,7 @@ module Sequence_Controller(
 		end
 		State5 : begin
 				Reg_Dest=2'b01;
-				MEMtoREG='b000; //المفروض يبقي دة يخليني اختار ال alu out regggggg
+				MEMtoREG='b000; //editted
 				REG_WS=1;
 				next_state=State0;
 		end
@@ -346,9 +346,10 @@ module Sequence_Controller(
 			OP_ADDi:begin
 				if(OF_OUT==1)
 					next_state=State30;  
-					else
+				else
 					next_state=State8;
 			end
+			default: next_state=State31; //invalid instruction
 
 			endcase  
 		end
@@ -517,6 +518,7 @@ module Sequence_Controller(
 			EPC_SEL = 'd0;
 			EPC_EN='d1;
 			PC_SEL='b100;
+			PC_EN='d1;
 			next_state=State0; //fetch
 		end
 		State31:  begin
@@ -525,6 +527,7 @@ module Sequence_Controller(
 			EPC_SEL='d0;
 			EPC_EN='d1;
 			PC_SEL='b100;
+			PC_EN='d1;
 			next_state=State0; //fetch
 		end		
 		State32:  begin
@@ -569,8 +572,12 @@ module Sequence_Controller(
 			ALU_SEL1 = 'd1;
 			ALU_SEL2 = 'd0;
 			ALU_OP=3'b010;
-			if(mult_div_done)
-				next_state=State37;
+			if(mult_div_done)begin
+				if(OF_OUT==1)
+					next_state=State30;  
+				else
+					next_state=State37;
+			end
 			else
 				next_state=State36;
 		end	
