@@ -84,7 +84,6 @@ module Multi_Cyclic_MIPS #(
     	.REG_WS(REG_WS)
     	);
 
-	wire [3:0] ALU_CONTROL;
     ALU_Controller ALU_CTRL(
 		.Funct(Instr[5:0]),
 		.ctrl(ALU_OP),
