@@ -1,4 +1,7 @@
+.vscode
 *.jou
 *.log
 *.str
 *.bat
+*.wdf
+xsim_1.c
