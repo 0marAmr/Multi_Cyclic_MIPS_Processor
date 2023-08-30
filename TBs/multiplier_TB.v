@@ -12,7 +12,7 @@ module multiplier_TB;
     wire valid;
 
 
-    booth_multiplier DUT (
+    multiplier DUT (
         .CLK (CLK),
         .RST(RST),
         .Operand1(Operand1),
