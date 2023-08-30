@@ -10,7 +10,7 @@ module multiplier #(
 );
 
     wire [1:0] status;
-    data_path U0_DP (
+    multiplier_datapath U0_mult_dp (
         .CLK(CLK),
         .RST(RST),
         .initialize(initialize),
@@ -24,7 +24,7 @@ module multiplier #(
         .result(result)
     );
 
-    controller U0_ctrl (
+    multiplier_controller U0_mult_ctrl (
         .RST(RST),
         .CLK(CLK),
         .status(status),
