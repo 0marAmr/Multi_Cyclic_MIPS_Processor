@@ -1,105 +1,22 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_TB_behav xil_defaultlib.Top_TB xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot divider_TB_behav xil_defaultlib.divider_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v" Line 1. Module RAM doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v" Line 1. Module Multi_Cyclic_MIPS doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v" Line 1. Module Combinational_Block doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v" Line 1. Module Sequence_Controller doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v" Line 1. Module ALU_Controller doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v" Line 1. Module Instruction_Fetch_Unit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v" Line 1. Module Concatenate doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v" Line 1. Module DataPath doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v" Line 1. Module mux_4_to_1(WIDTH=5) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v" Line 1. Module REG_FILE doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v" Line 1. Module SH_L_2 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v" Line 1. Module Arithmatic_Logic_Unit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v" Line 1. Module RAM doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v" Line 1. Module Multi_Cyclic_MIPS doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v" Line 1. Module Combinational_Block doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v" Line 1. Module Sequence_Controller doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v" Line 1. Module ALU_Controller doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v" Line 1. Module Instruction_Fetch_Unit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v" Line 1. Module Concatenate doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v" Line 1. Module DataPath doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v" Line 1. Module mux_4_to_1(WIDTH=5) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v" Line 1. Module REG_FILE doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register(width=32'b0100000) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v" Line 1. Module sign_extend_0(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v" Line 1. Module sign_extend(INPUT_WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v" Line 1. Module SH_L_2 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v" Line 1. Module mux_8_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v" Line 1. Module Arithmatic_Logic_Unit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v" Line 1. Module register doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v" Line 1. Module mux_2_to_1 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v" Line 1. Module register_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v" Line 1. Module divider doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_datapath.v" Line 1. Module divider_datapath doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_controller.v" Line 1. Module divider_controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v" Line 1. Module divider doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_datapath.v" Line 1. Module divider_datapath doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_controller.v" Line 1. Module divider_controller doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.RAM
-Compiling module xil_defaultlib.Combinational_Block
-Compiling module xil_defaultlib.Sequence_Controller
-Compiling module xil_defaultlib.ALU_Controller
-Compiling module xil_defaultlib.register_en
-Compiling module xil_defaultlib.mux_2_to_1
-Compiling module xil_defaultlib.Concatenate
-Compiling module xil_defaultlib.mux_8_to_1
-Compiling module xil_defaultlib.Instruction_Fetch_Unit
-Compiling module xil_defaultlib.register(width=32'b0100000)
-Compiling module xil_defaultlib.sign_extend_0_default
-Compiling module xil_defaultlib.sign_extend_default
-Compiling module xil_defaultlib.sign_extend_0(INPUT_WIDTH=16)
-Compiling module xil_defaultlib.sign_extend(INPUT_WIDTH=16)
-Compiling module xil_defaultlib.mux_4_to_1(WIDTH=5)
-Compiling module xil_defaultlib.REG_FILE
-Compiling module xil_defaultlib.SH_L_2
-Compiling module xil_defaultlib.Arithmatic_Logic_Unit
-Compiling module xil_defaultlib.register
-Compiling module xil_defaultlib.DataPath
-Compiling module xil_defaultlib.Multi_Cyclic_MIPS
-Compiling module xil_defaultlib.Top
-Compiling module xil_defaultlib.Top_TB
+Compiling module xil_defaultlib.divider_datapath
+Compiling module xil_defaultlib.divider_controller
+Compiling module xil_defaultlib.divider
+Compiling module xil_defaultlib.divider_TB
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot Top_TB_behav
+Built simulation snapshot divider_TB_behav
