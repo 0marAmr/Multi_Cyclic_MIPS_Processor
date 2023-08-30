@@ -538,6 +538,8 @@ module Sequence_Controller(
 
 		end
 		State33:  begin 
+			ALU_SEL1 = 'd1;
+			ALU_SEL2 = 'd0;
 			ALU_OP=3'b111;
 			if(mult_div_done)
 				next_state=State35;
@@ -564,6 +566,8 @@ module Sequence_Controller(
 			next_state=State0; //fetch
 		end
 		State36:  begin 
+			ALU_SEL1 = 'd1;
+			ALU_SEL2 = 'd0;
 			ALU_OP=3'b010;
 			if(mult_div_done)
 				next_state=State37;
