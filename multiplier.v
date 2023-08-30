@@ -1,5 +1,5 @@
 module multiplier #(
-    DATA_WIDTH = 5
+    DATA_WIDTH = 32
 )(
     input wire CLK, RST,
     input wire start,

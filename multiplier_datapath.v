@@ -1,6 +1,6 @@
 module multiplier_datapath #(
-    DATA_WIDTH = 5,
-    COUNTER_WIDTH =3
+    DATA_WIDTH = 32,
+    COUNTER_WIDTH =6
 )(
     input wire RST,
     input wire CLK,
