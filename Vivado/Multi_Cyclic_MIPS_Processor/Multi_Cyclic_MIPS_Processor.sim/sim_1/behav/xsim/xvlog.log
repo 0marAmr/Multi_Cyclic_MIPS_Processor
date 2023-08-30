@@ -1,8 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module divider
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_controller.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module divider_controller
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_datapath.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module divider_datapath
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/TBs/divider_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module divider_TB

@@ -1,0 +1,34 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../ALU_Controller.v" \
+"../../../../../../Arithmatic_Logic_Unit.v" \
+"../../../../../../Combinational_Block.v" \
+"../../../../../../Concatenate.v" \
+"../../../../../../Data_path.v" \
+"../../../../../../Instruction_Fetch_Unit.v" \
+"../../../../../../Multi_Cyclic_MIPS.v" \
+"../../../../../../RAM.v" \
+"../../../../../../REG_FILE.v" \
+"../../../../../../SH_L_2.v" \
+"../../../../../../Sequence_Controller.v" \
+"../../../../../../Top.v" \
+"../../../../../../divider.v" \
+"../../../../../../divider_controller.v" \
+"../../../../../../divider_datapath.v" \
+"../../../../../../multiplier.v" \
+"../../../../../../multiplier_controller.v" \
+"../../../../../../multiplier_datapath.v" \
+"../../../../../../mux_2_to_1.v" \
+"../../../../../../mux_4_to_1.v" \
+"../../../../../../mux_8_to_1.v" \
+"../../../../../../register.v" \
+"../../../../../../register_en.v" \
+"../../../../../../sign_extend.v" \
+"../../../../../../sign_extend_0.v" \
+"../../../../../../TBs/Top_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

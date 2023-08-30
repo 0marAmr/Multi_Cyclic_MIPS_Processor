@@ -1,0 +1,401 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Aug 30 11:08:09 2023
+# Process ID: 47000
+# Current directory: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.runs/synth_1
+# Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.runs/synth_1/Top.vds
+# Journal file: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.runs/synth_1\vivado.jou
+# Running On: Omars-PC, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17095 MB
+#-----------------------------------------------------------
+source Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 394.531 ; gain = 69.855
+Command: synth_design -top Top -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 36468
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'lo_EN_EN', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:362]
+INFO: [Synth 8-11241] undeclared symbol 'lo_data_data', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:363]
+INFO: [Synth 8-11241] undeclared symbol 'mult_start', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:59]
+INFO: [Synth 8-11241] undeclared symbol 'div_start', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:60]
+INFO: [Synth 8-11241] undeclared symbol 'mult_div_done', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:61]
+CRITICAL WARNING: [Synth 8-9339] data object 'ALU_CONTROL' is already declared [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:87]
+INFO: [Synth 8-6826] previous declaration of 'ALU_CONTROL' is from here [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:40]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'ALU_CONTROL' is ignored [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:87]
+INFO: [Synth 8-11241] undeclared symbol 'initialize', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:18]
+INFO: [Synth 8-11241] undeclared symbol 'load_divident', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:19]
+INFO: [Synth 8-11241] undeclared symbol 'sh_en', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:20]
+INFO: [Synth 8-11241] undeclared symbol 'divident_gt_divisor', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:22]
+INFO: [Synth 8-11241] undeclared symbol 'initialize', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:16]
+INFO: [Synth 8-11241] undeclared symbol 'accum_load', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:17]
+INFO: [Synth 8-11241] undeclared symbol 'sh_en', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:18]
+INFO: [Synth 8-11241] undeclared symbol 'comp', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:19]
+INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:23]
+INFO: [Synth 8-11241] undeclared symbol 'MEM_WS', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:18]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 833.191 ; gain = 413.793
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v:1]
+	Parameter PROGRAM bound to: text.txt - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'text.txt'; please make sure the file is added to project and has read permission, ignoring [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Multi_Cyclic_MIPS' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Combinational_Block' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Combinational_Block' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Combinational_Block.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Sequence_Controller' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Sequence_Controller' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Sequence_Controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Controller' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Controller' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/ALU_Controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_Fetch_Unit' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register_en' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_en' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register_en.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Concatenate' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Concatenate' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Concatenate.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_8_to_1' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_8_to_1' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_8_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Fetch_Unit' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Instruction_Fetch_Unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DataPath' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend_0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+	Parameter INPUT_WIDTH bound to: 8 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+	Parameter INPUT_WIDTH bound to: 8 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend_0__parameterized0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+	Parameter INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_0__parameterized0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend_0.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend__parameterized0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+	Parameter INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend__parameterized0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4_to_1' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v:1]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_4_to_1' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/REG_FILE.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SH_L_2' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SH_L_2' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/SH_L_2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Arithmatic_Logic_Unit' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v:1]
+	Parameter OPERAND_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'multiplier' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:1]
+INFO: [Synth 8-6157] synthesizing module 'multiplier_datapath' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier_datapath.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_datapath' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier_datapath.v:1]
+INFO: [Synth 8-6157] synthesizing module 'multiplier_controller' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_controller' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divider' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divider_datapath' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_datapath.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'divider_datapath' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_datapath.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divider_controller' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'divider_controller' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'divider' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:1]
+INFO: [Synth 8-226] default block is never used [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'Arithmatic_Logic_Unit' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Arithmatic_Logic_Unit.v:1]
+WARNING: [Synth 8-7071] port 'CLK' of module 'Arithmatic_Logic_Unit' is unconnected for instance 'ALU' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:264]
+WARNING: [Synth 8-7071] port 'RST' of module 'Arithmatic_Logic_Unit' is unconnected for instance 'ALU' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:264]
+WARNING: [Synth 8-7023] instance 'ALU' of module 'Arithmatic_Logic_Unit' has 15 connections declared, but only 13 given [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:264]
+INFO: [Synth 8-6157] synthesizing module 'register__parameterized0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register__parameterized0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4_to_1__parameterized0' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_4_to_1__parameterized0' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/mux_4_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DataPath' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Multi_Cyclic_MIPS' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:1]
+WARNING: [Synth 8-4767] Trying to implement RAM 'memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Invalid write to RAM. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "memory_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net lo_EN_EN in module/entity DataPath does not have driver. [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:362]
+WARNING: [Synth 8-3848] Net lo_data_data in module/entity DataPath does not have driver. [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:363]
+WARNING: [Synth 8-7129] Port lo_EN in module DataPath is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1157.184 ; gain = 737.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1157.184 ; gain = 737.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1157.184 ; gain = 737.785
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Sequence_Controller'
+INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'multiplier_controller'
+INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'divider_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  State0 |                           000000 |                           000000
+                  State1 |                           000001 |                           000001
+                  State2 |                           000010 |                           000010
+                  State3 |                           000011 |                           000011
+                 State15 |                           000100 |                           001111
+                 State16 |                           000101 |                           010000
+                  State9 |                           000110 |                           001001
+                 State10 |                           000111 |                           001010
+                 State28 |                           001000 |                           011100
+                 State29 |                           001001 |                           011101
+                 State34 |                           001010 |                           100010
+                 State32 |                           001011 |                           100000
+                 State13 |                           001100 |                           001101
+                 State12 |                           001101 |                           001100
+                 State21 |                           001110 |                           010101
+                 State20 |                           001111 |                           010100
+                 State36 |                           010000 |                           100100
+                 State37 |                           010001 |                           100101
+                  State4 |                           010010 |                           000100
+                  State5 |                           010011 |                           000101
+                 State11 |                           010100 |                           001011
+                 State14 |                           010101 |                           001110
+                  State6 |                           010110 |                           000110
+                 State33 |                           010111 |                           100001
+                 State35 |                           011000 |                           100011
+                  State7 |                           011001 |                           000111
+                 State27 |                           011010 |                           011011
+                 State26 |                           011011 |                           011010
+                 State24 |                           011100 |                           011000
+                 State23 |                           011101 |                           010111
+                 State18 |                           011110 |                           010010
+                 State17 |                           011111 |                           010001
+                 State25 |                           100000 |                           011001
+                 State22 |                           100001 |                           010110
+                 State19 |                           100010 |                           010011
+                 State30 |                           100011 |                           011110
+                  State8 |                           100100 |                           001000
+                 State31 |                           100101 |                           011111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'Sequence_Controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              000
+                    INIT |                            00010 |                              001
+                   SHIFT |                            00100 |                              010
+                     ADD |                            01000 |                              011
+             FORCE_SHIFT |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'one-hot' in module 'multiplier_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                    INIT |                               01 |                               01
+                    OPER |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'sequential' in module 'divider_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1445.512 ; gain = 1026.113
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 46    
+	                8 Bit    Registers := 1024  
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input 8192 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 13    
+	  16 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3576  
+	   3 Input    8 Bit        Muxes := 416   
+	   5 Input    8 Bit        Muxes := 312   
+	   4 Input    8 Bit        Muxes := 256   
+	  38 Input    6 Bit        Muxes := 1     
+	  17 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 12    
+	   9 Input    6 Bit        Muxes := 1     
+	  10 Input    6 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 5     
+	  28 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 312   
+	   2 Input    3 Bit        Muxes := 3     
+	  17 Input    3 Bit        Muxes := 1     
+	   9 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	  38 Input    3 Bit        Muxes := 5     
+	   3 Input    2 Bit        Muxes := 29    
+	   2 Input    2 Bit        Muxes := 3     
+	  38 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 52    
+	  17 Input    1 Bit        Muxes := 5     
+	   9 Input    1 Bit        Muxes := 5     
+	  38 Input    1 Bit        Muxes := 20    
+	   5 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 3     
+	  16 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[4]) is unused and will be removed from module Arithmatic_Logic_Unit.
+WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[3]) is unused and will be removed from module Arithmatic_Logic_Unit.
+WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[2]) is unused and will be removed from module Arithmatic_Logic_Unit.
+WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[1]) is unused and will be removed from module Arithmatic_Logic_Unit.
+WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[0]) is unused and will be removed from module Arithmatic_Logic_Unit.
+WARNING: [Synth 8-3332] Sequential element (U0_div/U0_div_ctrl/FSM_sequential_present_state_reg[1]) is unused and will be removed from module Arithmatic_Logic_Unit.
+WARNING: [Synth 8-3332] Sequential element (U0_div/U0_div_ctrl/FSM_sequential_present_state_reg[0]) is unused and will be removed from module Arithmatic_Logic_Unit.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:01 ; elapsed = 00:02:49 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:51 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:02 ; elapsed = 00:02:51 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:07 ; elapsed = 00:02:57 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Synthesis Optimization Complete : Time (s): cpu = 00:02:07 ; elapsed = 00:02:57 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1465.562 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1474.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: a8bcc328
+INFO: [Common 17-83] Releasing license: Synthesis
+92 Infos, 15 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:03:00 . Memory (MB): peak = 1474.195 ; gain = 1079.664
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.runs/synth_1/Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 30 11:11:17 2023...
