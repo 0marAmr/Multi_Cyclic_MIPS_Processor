@@ -112,6 +112,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
 /************ Register File Write Data Multipexer ************/
     wire [DATA_WIDTH-1: 0] CAUSE_OUT;
     wire [DATA_WIDTH-1: 0] Reg_Write_Data;
+    wire [DATA_WIDTH-1: 0] hi_out,lo_out;
   //  wire [DATA_WIDTH-1: 0] ALU_OUT; //commentted
   
 
@@ -324,7 +325,7 @@ localparam REG_FILE_ADDR_WIDTH =  5;
 ///////////////////// hi && lo ///////////////////////
 /////////////////////////////////////////////////////////////
 
-    wire [DATA_WIDTH-1: 0] hi_data,lo_data,hi_out,lo_out;
+    wire [DATA_WIDTH-1: 0] hi_data,lo_data;
     mux_2_to_1 #(
         .WIDTH(DATA_WIDTH)
     ) MUX12 (
@@ -364,5 +365,3 @@ localparam REG_FILE_ADDR_WIDTH =  5;
     );	
 
 endmodule
-
-EPC_OUT
