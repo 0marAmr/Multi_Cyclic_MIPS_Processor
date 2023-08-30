@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module multiplier_TB;
     
-    parameter DATA_WIDTH = 5;
+    parameter DATA_WIDTH = 32;
     
     reg CLK;
     reg RST;
@@ -63,8 +63,9 @@ module multiplier_TB;
     initial begin
         initialize();
         reset();
-        multiply('b01011,'b01110);
-        repeat (10) @(negedge CLK);
+        multiply(8,9);
+        @(posedge valid);
+        repeat (5) @(negedge CLK);
         $finish;
     end
 

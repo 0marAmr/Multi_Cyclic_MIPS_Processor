@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module divider_TB;
     
-    parameter DATA_WIDTH = 6;
+    parameter DATA_WIDTH = 32;
     
     reg RST;
     reg CLK;
@@ -63,8 +63,9 @@ module divider_TB;
     initial begin
         initialize();
         reset();
-        divide(21,7);
-        repeat (15) @(negedge CLK);
+        divide(121,11);
+        @(posedge done)
+        repeat (5) @(negedge CLK);
         $finish;
     end
 
