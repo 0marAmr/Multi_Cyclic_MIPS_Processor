@@ -14,7 +14,7 @@ module divider_controller (
                         INIT = 'b01,
                         OPER = 'b10;
 
-    reg present_state, next_state;
+    reg [1:0] present_state, next_state;
 
     always @(posedge CLK or negedge RST) begin
         if (~RST) begin
