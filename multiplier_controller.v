@@ -87,6 +87,9 @@ module multiplier_controller (
                 if ((status == 'b00||status == 'b11)&& ~done) begin
                     sh_en = 'b1;
                 end
+                else if (done) begin
+                    valid ='b1;
+                end
             end
             FORCE_SHIFT: begin
                 next_state = SHIFT;
