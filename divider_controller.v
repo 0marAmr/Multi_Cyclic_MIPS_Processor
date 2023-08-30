@@ -10,8 +10,9 @@ module divider_controller (
 );
     
 
-    localparam      IDLE = 'b0,
-                    OPER = 'b1;
+    localparam [1:0]    IDLE = 'b00,
+                        INIT = 'b01,
+                        OPER = 'b10;
 
     reg present_state, next_state;
 
@@ -32,17 +33,17 @@ module divider_controller (
             IDLE: begin
                 /*next state*/
                 if (start) begin
-                    next_state = OPER;
+                    next_state = INIT;
                 end
                 else begin
                     next_state = IDLE;
                 end
 
-                /*output*/
-                if (start) begin
-                   initialize = 'b1; 
-                end
             end 
+            INIT : begin
+                next_state = OPER;
+                initialize = 'b1; 
+            end
             OPER: begin
                 /*next state*/
                 if (done) begin
@@ -51,7 +52,6 @@ module divider_controller (
                 else begin
                     next_state = OPER;
                 end
-
                 /*output*/
                 if (divident_gt_divisor) begin
                     load_divident = 'b1;
@@ -60,6 +60,7 @@ module divider_controller (
                     sh_en = 'b1;
                 end
             end
+            default : next_state = IDLE;
         endcase    
     end
 

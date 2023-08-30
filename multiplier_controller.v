@@ -10,12 +10,13 @@ module multiplier_controller (
     output reg comp,
     output reg valid
 );
-    localparam [1:0]    IDLE        = 'b00,
-                        SHIFT       = 'b01,
-                        ADD         = 'b10,
-                        FORCE_SHIFT      = 'b11;
+    localparam [2:0]    IDLE        = 'b000,
+                        INIT        = 'b001,
+                        SHIFT       = 'b010,
+                        ADD         = 'b011,
+                        FORCE_SHIFT      = 'b100;
     
-    reg [1:0] present_state, next_state;
+    reg [2:0] present_state, next_state;
 
     always @(posedge CLK or negedge RST) begin
         if (~RST) begin
@@ -36,10 +37,7 @@ module multiplier_controller (
             IDLE: begin
                 /*next state*/
                 if (start) begin
-                    if(status[1])
-                        next_state = ADD;
-                    else
-                        next_state = SHIFT;
+                    next_state = INIT;
                 end
                 else begin
                     next_state = IDLE;
@@ -47,8 +45,15 @@ module multiplier_controller (
 
                 /*output*/
                 if (start) begin
-                    initialize = 'b1;
                 end
+            end
+            INIT : begin
+                if(status[1])
+                    next_state = ADD;
+                else
+                    next_state = SHIFT;
+                
+                initialize = 'b1;
             end
             ADD: begin
                 /*next state*/
@@ -88,9 +93,7 @@ module multiplier_controller (
                 sh_en = 'b1;
 
             end
-
-                            // next_state = IDLE;
-                // valid = 1'b1;
+            default : next_state = IDLE;
         endcase
     end
 
