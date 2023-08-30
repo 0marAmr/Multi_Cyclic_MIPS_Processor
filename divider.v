@@ -1,5 +1,5 @@
 module divider #(
-    parameter DATA_WIDTH = 6
+    parameter DATA_WIDTH = 32
 ) (
     input wire RST,
     input wire CLK,

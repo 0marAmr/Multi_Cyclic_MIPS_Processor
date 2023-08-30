@@ -1,6 +1,6 @@
 module divider_datapath #(
-    parameter DATA_WIDTH = 6,
-    parameter COUNTER_WIDTH = 3
+    parameter DATA_WIDTH = 32,
+    parameter COUNTER_WIDTH = 6
 
 )(
     input wire RST,
@@ -54,6 +54,6 @@ module divider_datapath #(
     end
 
     assign done = (count == DATA_WIDTH);
-    assign divident_gt_divisor = (divident > divisor);
-    assign result = quotient + 'b1;
+    assign divident_gt_divisor = (divident >= divisor);
+    assign result = quotient;
 endmodule
