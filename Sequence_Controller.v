@@ -72,7 +72,8 @@ module Sequence_Controller(
 							State34='d34,
 							State35='d35,
 							State36='d36,
-							State37='d37;
+							State37='d37,
+							State38='d38;
 
 	///////////////////////different op code parameters //////////////////////////
 
@@ -100,7 +101,8 @@ module Sequence_Controller(
 							OP_SB     = 6'b101000,
 							OP_SH     = 6'b101001,
 							OP_SW     = 6'b101011,
-							OP_MUL    = 6'b011100;
+							OP_MUL    = 6'b011100,
+							OP_HALT    = 6'b111111;
 
 	localparam      [1:0] 	WW=2'b00, 		//mem wrire word
 							WH=2'b01, 		//mem write half-word
@@ -280,6 +282,9 @@ module Sequence_Controller(
 								next_state = State31;  //invalid instruction
 								mult_start='d0;
 							end
+						end
+						OP_HALT : begin
+							next_state = State38;
 						end
 						default		:	begin		//other I-type 
 							next_state = State7;
@@ -587,7 +592,11 @@ module Sequence_Controller(
 			hi_SEL = 'd1;
 			hi_EN = 'd1;
 			next_state=State0; //fetch
-		end			
+		end
+		State38: begin
+			PC_EN = 'b0;
+			next_state = State38;
+		end
 		default	:	begin		//invalid opcode
 			next_state = State31;
 		end
