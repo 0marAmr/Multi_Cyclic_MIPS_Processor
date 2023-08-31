@@ -1,0 +1,64 @@
+OPCode = LB, Rs = 20, Rt = 20, Address/constant=  5747 
+OPCode = SW, Rs = 16, Rt = 23, Address/constant= 13425 
+OPCode = LH, Rs = 16, Rt = 16, Address/constant= 55153 
+OPCode = XORi, Rs = 16, Rt = 19, Address/constant= 19291 
+OPCode = LBU, Rs = 18, Rt = 19, Address/constant= 62153 
+OPCode = SLTiu, Rs = 21, Rt = 17, Address/constant= 59272 
+OPCode = LW, Rs = 16, Rt = 21, Address/constant= 60392 
+OPCode = LBU, Rs = 21, Rt = 17, Address/constant= 41724 
+OPCode = LBU, Rs = 18, Rt = 22, Address/constant=  8416 
+OPCode = LBU, Rs = 20, Rt = 22, Address/constant= 20158 
+OPCode = LHU, Rs = 23, Rt = 18, Address/constant= 24028 
+
+ the instrucion is R_type: OPCode = XOR, Rs = 20, Rt = 16, Rd= 23, Shamt= 0 
+OPCode = LHU, Rs = 22, Rt = 16, Address/constant= 53893 
+OPCode = MFC0, Rs = 23, Rt = 22, Rd= 22, Shamt= 0 
+OPCode = LBU, Rs = 23, Rt = 17, Address/constant=  2490 
+OPCode = LH, Rs = 21, Rt = 21, Address/constant= 65474 
+OPCode = ANDi, Rs = 18, Rt = 22, Address/constant= 12792 
+
+ the instrucion is R_type: OPCode = Add, Rs = 17, Rt = 20, Rd= 19, Shamt= 0 
+OPCode = SLTi, Rs = 16, Rt = 18, Address/constant=  7251 
+OPCode = XORi, Rs = 19, Rt = 19, Address/constant= 22499 
+OPCode = LB, Rs = 20, Rt = 19, Address/constant= 63346 
+OPCode = SB, Rs = 20, Rt = 17, Address/constant= 32871 
+OPCode = LBU, Rs = 20, Rt = 16, Address/constant= 32931 
+OPCode = SLTi, Rs = 20, Rt = 20, Address/constant= 57013 
+OPCode = SLTiu, Rs = 16, Rt = 16, Address/constant= 60232 
+OPCode = LB, Rs = 20, Rt = 20, Address/constant= 52976 
+OPCode = SW, Rs = 21, Rt = 21, Address/constant= 58122 
+OPCode = LHU, Rs = 16, Rt = 20, Address/constant= 28361 
+OPCode = SLTi, Rs = 18, Rt = 19, Address/constant= 59121 
+OPCode = SW, Rs = 23, Rt = 17, Address/constant= 36728 
+OPCode = ORi, Rs = 20, Rt = 23, Address/constant= 37088 
+OPCode = ADDi, Rs = 18, Rt = 23, Address/constant=  2008 
+OPCode = SLTi, Rs = 23, Rt = 19, Address/constant= 19571 
+OPCode = BLEZ, Rs = 19, Rt = 20, Address/constant=   571 
+OPCode = ADDiu, Rs = 17, Rt = 21, Address/constant=  2138 
+OPCode = ADDi, Rs = 18, Rt = 17, Address/constant= 61455 
+OPCode = ORi, Rs = 19, Rt = 21, Address/constant= 62588 
+OPCode = MFC0, Rs = 19, Rt = 21, Rd= 22, Shamt= 0 
+OPCode = SLTiu, Rs = 21, Rt = 18, Address/constant= 39923 
+OPCode = SLTiu, Rs = 21, Rt = 20, Address/constant= 36825 
+OPCode = ADDiu, Rs = 17, Rt = 22, Address/constant= 36889 
+OPCode = BLEZ, Rs = 18, Rt = 21, Address/constant= 17595 
+OPCode = LHU, Rs = 18, Rt = 20, Address/constant=  1506 
+OPCode = BNE, Rs = 18, Rt = 21, Address/constant= 56093 
+OPCode = LHU, Rs = 18, Rt = 20, Address/constant=   647 
+OPCode = BNE, Rs = 22, Rt = 19, Address/constant= 57552 
+ OPCode = Jump to Address 66795657 
+OPCode = SLTiu, Rs = 17, Rt = 20, Address/constant= 59991 
+
+ the instrucion is R_type: OPCode = SRA, Rs = 17, Rt = 23, Rd= 21, Shamt=22 
+OPCode = LB, Rs = 17, Rt = 19, Address/constant= 35978 
+OPCode = BNE, Rs = 22, Rt = 21, Address/constant= 52902 
+OPCode = ANDi, Rs = 17, Rt = 23, Address/constant= 30552 
+OPCode = MFC0, Rs = 16, Rt = 19, Rd= 18, Shamt= 0 
+OPCode = LW, Rs = 21, Rt = 16, Address/constant= 44911 
+OPCode = SW, Rs = 19, Rt = 18, Address/constant=  1915 
+OPCode = ADDiu, Rs = 20, Rt = 21, Address/constant= 11652 
+OPCode = ADDiu, Rs = 19, Rt = 23, Address/constant= 49035 
+OPCode = LBU, Rs = 16, Rt = 21, Address/constant= 43168 
+OPCode = BGTZ, Rs = 17, Rt = 17, Address/constant= 13928 
+ OPCode = Jump to Address 32627619 
+ OPCode = Jump to Address 32627619 
