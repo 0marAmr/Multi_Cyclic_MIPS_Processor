@@ -1,0 +1,65 @@
+ OPCode = Jump to Address  6968541 
+OPCode = ORi, Rs = 21, Rt = 18, Address/constant= 59889 
+OPCode = SLTi, Rs = 19, Rt = 20, Address/constant= 16224 
+OPCode = LW, Rs = 20, Rt = 19, Address/constant= 29366 
+OPCode = LBU, Rs = 23, Rt = 23, Address/constant= 51019 
+OPCode = ORi, Rs = 17, Rt = 23, Address/constant=  6928 
+OPCode = LBU, Rs = 22, Rt = 19, Address/constant= 60624 
+ OPCode = Jump and link to Address 23428432 
+
+ the instrucion is R_type: OPCode = SLL, Rs = 17, Rt = 19, Rd= 21, Shamt= 6 
+OPCode = BLEZ, Rs = 17, Rt = 23, Address/constant=  1025 
+OPCode = SW, Rs = 16, Rt = 21, Address/constant=  9539 
+OPCode = LHU, Rs = 18, Rt = 22, Address/constant= 36608 
+
+ the instrucion is R_type: OPCode = AND, Rs = 16, Rt = 21, Rd= 22, Shamt= 0 
+OPCode = SLTiu, Rs = 16, Rt = 20, Address/constant= 41314 
+OPCode = LH, Rs = 16, Rt = 20, Address/constant= 38126 
+OPCode = ADDiu, Rs = 23, Rt = 16, Address/constant=  7442 
+OPCode = SH, Rs = 17, Rt = 17, Address/constant= 52112 
+OPCode = LB, Rs = 16, Rt = 23, Address/constant=  2310 
+OPCode = LH, Rs = 22, Rt = 16, Address/constant= 41821 
+OPCode = SH, Rs = 16, Rt = 20, Address/constant= 53008 
+OPCode = BEQ, Rs = 22, Rt = 19, Address/constant= 63018 
+ OPCode = Jump and link to Address 56055509 
+OPCode = SB, Rs = 19, Rt = 22, Address/constant= 57170 
+OPCode = BNE, Rs = 16, Rt = 23, Address/constant= 46941 
+OPCode = LW, Rs = 16, Rt = 16, Address/constant= 56538 
+OPCode = LW, Rs = 20, Rt = 20, Address/constant= 62857 
+OPCode = SLTi, Rs = 21, Rt = 20, Address/constant= 11135 
+OPCode = BEQ, Rs = 18, Rt = 20, Address/constant= 31519 
+OPCode = BNE, Rs = 23, Rt = 17, Address/constant=  6903 
+OPCode = LBU, Rs = 17, Rt = 17, Address/constant= 39193 
+OPCode = LB, Rs = 16, Rt = 23, Address/constant=  3927 
+
+ the instrucion is R_type: OPCode = SRA, Rs = 22, Rt = 18, Rd= 16, Shamt= 4 
+OPCode = XORi, Rs = 18, Rt = 20, Address/constant=   104 
+OPCode = LH, Rs = 21, Rt = 17, Address/constant= 25406 
+OPCode = MFC0, Rs = 22, Rt = 16, Rd= 20, Shamt= 0 
+OPCode = SLTiu, Rs = 23, Rt = 23, Address/constant= 46129 
+OPCode = BNE, Rs = 23, Rt = 22, Address/constant= 13133 
+
+ the instrucion is R_type: OPCode = SRLV, Rs = 20, Rt = 18, Rd= 21, Shamt= 0 
+OPCode = LH, Rs = 23, Rt = 19, Address/constant= 62319 
+OPCode = XORi, Rs = 19, Rt = 20, Address/constant= 39308 
+OPCode = SW, Rs = 17, Rt = 22, Address/constant= 19148 
+OPCode = SW, Rs = 19, Rt = 22, Address/constant= 22357 
+OPCode = ANDi, Rs = 16, Rt = 17, Address/constant= 26159 
+ OPCode = Jump and link to Address 63593136 
+OPCode = SLTi, Rs = 23, Rt = 21, Address/constant= 26057 
+OPCode = SH, Rs = 17, Rt = 23, Address/constant= 36463 
+OPCode = SH, Rs = 20, Rt = 22, Address/constant= 30199 
+OPCode = BLEZ, Rs = 16, Rt = 19, Address/constant= 64109 
+OPCode = BNE, Rs = 21, Rt = 23, Address/constant= 58103 
+OPCode = LB, Rs = 20, Rt = 19, Address/constant= 47428 
+OPCode = SLTi, Rs = 18, Rt = 17, Address/constant= 55129 
+OPCode = ORi, Rs = 23, Rt = 22, Address/constant= 20308 
+OPCode = SW, Rs = 19, Rt = 17, Address/constant=  1144 
+OPCode = SW, Rs = 23, Rt = 17, Address/constant= 22306 
+OPCode = ADDi, Rs = 23, Rt = 21, Address/constant= 48613 
+OPCode = BNE, Rs = 22, Rt = 20, Address/constant= 41953 
+OPCode = BNE, Rs = 18, Rt = 23, Address/constant= 20160 
+OPCode = SLTi, Rs = 19, Rt = 19, Address/constant=  7546 
+OPCode = BLEZ, Rs = 23, Rt = 22, Address/constant= 56002 
+OPCode = LBU, Rs = 19, Rt = 16, Address/constant= 36066 
+OPCode = LBU, Rs = 19, Rt = 16, Address/constant= 36066 

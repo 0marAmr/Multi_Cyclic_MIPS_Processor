@@ -224,13 +224,7 @@ module testbench;
             test_item = new;
             test_item.randomize();
             Instruction = test_item.Instruction();
-            $display("Random value: OpCode: %b  | Rs:  %b   
-                                                | Rt:  %b   
-                                                | Rd:  %b   
-                                                | sh:  %b   
-                                                | Func:%b  
-                                                | Address16: %b 
-                                                | Address26: %b ", test_item.Op_Code , test_item.Source,
+            $display("Random value: OpCode: %b  | Rs:  %b | Rt:  %b| Rd:  %b| sh:  %b| Func:%b| Address16: %b| Address26: %b ", test_item.Op_Code , test_item.Source,
                                                                    test_item.Source2 , test_item.Dest ,
                                                                    test_item.shamt   , test_item.Inst_function ,
                                                                    test_item.Address_IType , test_item.Address_JType);
