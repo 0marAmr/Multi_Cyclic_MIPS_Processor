@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Aug 30 11:08:09 2023
-# Process ID: 47000
+# Start of session at: Wed Aug 30 19:33:47 2023
+# Process ID: 20324
 # Current directory: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.runs/synth_1/Top.vds
@@ -11,23 +11,25 @@
 # Running On: Omars-PC, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17095 MB
 #-----------------------------------------------------------
 source Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 394.531 ; gain = 69.855
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.562 ; gain = 67.648
+Command: read_checkpoint -auto_incremental -incremental F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Top -part xc7k70tfbv676-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 36468
+INFO: [Synth 8-7075] Helper process launched with PID 45292
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 INFO: [Synth 8-11241] undeclared symbol 'lo_EN_EN', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:362]
 INFO: [Synth 8-11241] undeclared symbol 'lo_data_data', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:363]
 INFO: [Synth 8-11241] undeclared symbol 'mult_start', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:59]
 INFO: [Synth 8-11241] undeclared symbol 'div_start', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:60]
 INFO: [Synth 8-11241] undeclared symbol 'mult_div_done', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:61]
-CRITICAL WARNING: [Synth 8-9339] data object 'ALU_CONTROL' is already declared [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:87]
-INFO: [Synth 8-6826] previous declaration of 'ALU_CONTROL' is from here [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:40]
-CRITICAL WARNING: [Synth 8-11152] second declaration of 'ALU_CONTROL' is ignored [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS.v:87]
 INFO: [Synth 8-11241] undeclared symbol 'initialize', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:18]
 INFO: [Synth 8-11241] undeclared symbol 'load_divident', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:19]
 INFO: [Synth 8-11241] undeclared symbol 'sh_en', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/divider.v:20]
@@ -39,7 +41,7 @@ INFO: [Synth 8-11241] undeclared symbol 'comp', assumed default net type 'wire' 
 INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/multiplier.v:23]
 INFO: [Synth 8-11241] undeclared symbol 'MEM_WS', assumed default net type 'wire' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:18]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 833.191 ; gain = 413.793
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 836.098 ; gain = 408.977
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Top.v:1]
 INFO: [Synth 8-6157] synthesizing module 'RAM' [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/RAM.v:1]
@@ -133,18 +135,18 @@ WARNING: [Synth 8-3848] Net lo_EN_EN in module/entity DataPath does not have dri
 WARNING: [Synth 8-3848] Net lo_data_data in module/entity DataPath does not have driver. [F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Data_path.v:363]
 WARNING: [Synth 8-7129] Port lo_EN in module DataPath is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1157.184 ; gain = 737.785
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 937.137 ; gain = 510.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1157.184 ; gain = 737.785
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 937.137 ; gain = 510.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbv676-1
-INFO: [Device 21-403] Loading part xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1157.184 ; gain = 737.785
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 937.137 ; gain = 510.016
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Sequence_Controller'
 INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'multiplier_controller'
@@ -211,7 +213,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'sequential' in module 'divider_controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1445.512 ; gain = 1026.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 937.137 ; gain = 510.016
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -227,20 +229,19 @@ Detailed RTL Component Info :
 +---Registers : 
 	               64 Bit    Registers := 2     
 	               32 Bit    Registers := 46    
-	                8 Bit    Registers := 1024  
+	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input 8192 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 3     
 	   2 Input   32 Bit        Muxes := 13    
 	  16 Input   32 Bit        Muxes := 1     
 	   4 Input   32 Bit        Muxes := 1     
 	   2 Input   31 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 3576  
-	   3 Input    8 Bit        Muxes := 416   
-	   5 Input    8 Bit        Muxes := 312   
-	   4 Input    8 Bit        Muxes := 256   
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   3 Input    8 Bit        Muxes := 2     
+	   5 Input    8 Bit        Muxes := 2     
 	  38 Input    6 Bit        Muxes := 1     
 	  17 Input    6 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 12    
@@ -250,15 +251,14 @@ Detailed RTL Component Info :
 	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 5     
 	  28 Input    4 Bit        Muxes := 1     
-	   5 Input    3 Bit        Muxes := 312   
 	   2 Input    3 Bit        Muxes := 3     
 	  17 Input    3 Bit        Muxes := 1     
 	   9 Input    3 Bit        Muxes := 1     
 	   6 Input    3 Bit        Muxes := 1     
 	  38 Input    3 Bit        Muxes := 5     
-	   3 Input    2 Bit        Muxes := 29    
 	   2 Input    2 Bit        Muxes := 3     
 	  38 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 52    
 	  17 Input    1 Bit        Muxes := 5     
 	   9 Input    1 Bit        Muxes := 5     
@@ -282,6 +282,15 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port lo_SEL in module DataPath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lo_EN in module DataPath is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (MIPS/CONTROL_UNIT/FSM_sequential_current_state_reg[5]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (MIPS/CONTROL_UNIT/FSM_sequential_current_state_reg[4]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (MIPS/CONTROL_UNIT/FSM_sequential_current_state_reg[3]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (MIPS/CONTROL_UNIT/FSM_sequential_current_state_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (MIPS/CONTROL_UNIT/FSM_sequential_current_state_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (MIPS/CONTROL_UNIT/FSM_sequential_current_state_reg[0]) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[4]) is unused and will be removed from module Arithmatic_Logic_Unit.
 WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[3]) is unused and will be removed from module Arithmatic_Logic_Unit.
 WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_present_state_reg[2]) is unused and will be removed from module Arithmatic_Logic_Unit.
@@ -290,21 +299,20 @@ WARNING: [Synth 8-3332] Sequential element (U0_mult/U0_mult_ctrl/FSM_onehot_pres
 WARNING: [Synth 8-3332] Sequential element (U0_div/U0_div_ctrl/FSM_sequential_present_state_reg[1]) is unused and will be removed from module Arithmatic_Logic_Unit.
 WARNING: [Synth 8-3332] Sequential element (U0_div/U0_div_ctrl/FSM_sequential_present_state_reg[0]) is unused and will be removed from module Arithmatic_Logic_Unit.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:01 ; elapsed = 00:02:49 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:51 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:02 ; elapsed = 00:02:51 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -322,37 +330,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -377,25 +385,25 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:07 ; elapsed = 00:02:57 . Memory (MB): peak = 1465.562 ; gain = 1046.164
-Synthesis Optimization Complete : Time (s): cpu = 00:02:07 ; elapsed = 00:02:57 . Memory (MB): peak = 1465.562 ; gain = 1046.164
+Synthesis finished with 0 errors, 1 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1116.434 ; gain = 689.312
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1465.562 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1116.434 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1474.195 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1220.844 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete, checksum: a8bcc328
 INFO: [Common 17-83] Releasing license: Synthesis
-92 Infos, 15 Warnings, 3 Critical Warnings and 0 Errors encountered.
+95 Infos, 23 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:03:00 . Memory (MB): peak = 1474.195 ; gain = 1079.664
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1220.844 ; gain = 801.430
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'F:/Digital_Track/04_STM_training/Multi_Cyclic_MIPS_Processor/Vivado/Multi_Cyclic_MIPS_Processor/Multi_Cyclic_MIPS_Processor.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 30 11:11:17 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 30 19:34:31 2023...
