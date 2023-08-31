@@ -246,7 +246,6 @@ module testbench;
 
         test_item.Monitor();
 
-
         $finish;
     end
 endmodule
