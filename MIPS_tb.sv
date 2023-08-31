@@ -142,16 +142,16 @@ class Random_Instruction;
                             6'b000111:$fwrite(file_handle2, "OPCode = SRAV, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
                             6'b001000:$fwrite(file_handle2, "OPCode = Jump Register, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
                             6'b001001:$fwrite(file_handle2, "OPCode = Jump and Link Register, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
-                            6'b001100:$display("The instrucion is  system call \n");
-                            6'b001101:$display("The instrucion is break \n");
-                            6'b010000:$display("The instrucion is move from hi \n");
-                            6'b010001:$display("The instrucion is move to hi \n ");
-                            6'b010010:$display("The instrucion is move from lo \n");
-                            6'b010011:$display("The instrucion is move to lo \n");
-                            6'b011000:$display("The instrucion is multiply \n");
-                            6'b011001:$display("The instrucion is multiply unsigned \n");
-                            6'b011010:$display("The instrucion is  divide \n");
-                            6'b011011:$display("The instrucion is  divide unsigned\n");
+                            6'b001100:$fwrite("The instrucion is  system call \n");
+                            6'b001101:$fwrite("The instrucion is break \n");
+                            6'b010000:$fwrite("The instrucion is move from hi \n");
+                            6'b010001:$fwrite("The instrucion is move to hi \n ");
+                            6'b010010:$fwrite("The instrucion is move from lo \n");
+                            6'b010011:$fwrite("The instrucion is move to lo \n");
+                            6'b011000:$fwrite("The instrucion is multiply \n");
+                            6'b011001:$fwrite("The instrucion is multiply unsigned \n");
+                            6'b011010:$fwrite("The instrucion is  divide \n");
+                            6'b011011:$fwrite("The instrucion is  divide unsigned\n");
                             6'b100000:$fwrite(file_handle2, "OPCode = Add, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
                             6'b100001:$fwrite(file_handle2, "OPCode = Add Unsigned, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
                             6'b100010:$fwrite(file_handle2, "OPCode = Sub, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
@@ -162,7 +162,7 @@ class Random_Instruction;
                             6'b100111:$fwrite(file_handle2, "OPCode = NOR, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
                             6'b101010:$fwrite(file_handle2, "OPCode = Set less than, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
                             6'b101011:$fwrite(file_handle2, "OPCode = Set less than unsigned, Rs = %d, Rt = %d, Rd= %d, Shamt=%d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:11],read_instruction[10:6]);
-                        default: $display("undefined instruction\n ");
+                        default: $fwrite("undefined instruction\n ");
 
                         endcase
                     end       
@@ -190,7 +190,7 @@ class Random_Instruction;
                     6'b101001:$fwrite(file_handle2, "OPCode = SH, Rs = %d, Rt = %d, Address/constant= %d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:0]);
                     6'b101011:$fwrite(file_handle2, "OPCode = SW, Rs = %d, Rt = %d, Address/constant= %d \n", read_instruction[25:21],read_instruction[20:16],read_instruction[15:0]);
 
-                    default: $display("\n undefined instruction");
+                    default: $fwrite("\n undefined instruction");
 
                     endcase
             end
