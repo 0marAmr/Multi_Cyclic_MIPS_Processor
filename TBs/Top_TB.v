@@ -1,5 +1,5 @@
 /*test bench is automatically generated*/
-`timescale 1ns / 1ps
+`timescale 1ps / 1ps
 
 module Top_TB;
 
@@ -34,10 +34,20 @@ module Top_TB;
     end
     endtask
     
+    parameter START_ADDR = 32'h0040_0000;
+    parameter END_ADDR = 32'h0052_0000;
+    integer i;
+    integer outfile;
     // test vector generator
     initial begin
         rst();
-        repeat (20) @(negedge CLK);
+        repeat (500) @(negedge CLK);
+        outfile = $fopen("memory_contents.txt","w");
+
+        for (i = START_ADDR; i <= END_ADDR; i = i +1) begin
+        $fdisplay(outfile,"address= 0x%h, data = %h,\t\t memory[%1d] = %d",i, DUT.U0_RAM.memory[i], i, DUT.U0_RAM.memory[i]);  //write as decimal
+        end
+         
         $finish; 
     end
 
