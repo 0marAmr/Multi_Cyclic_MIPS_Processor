@@ -14,13 +14,15 @@ module Instruction_Fetch_Unit
 );
 
 localparam NC = 0;
+localparam START_ADDR = 32'h0040_0000;
 /////////////////////////////////////////////////////////////////
 //////////////////////// Program Counter ////////////////////////
 /////////////////////////////////////////////////////////////////
 wire [ADDRESS_WIDTH-1:0] PC_SEL_WIRE;
 
 register_en #(
-    .width(ADDRESS_WIDTH)
+    .width(ADDRESS_WIDTH),
+    .INIT_VAL(START_ADDR)
 ) PC (
     .CLK(CLK),
     .RST(RST),
