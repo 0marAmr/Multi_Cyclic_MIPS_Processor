@@ -46,7 +46,8 @@ class Random_Instruction;
     constraint Source_Reg_Constraint  { Source inside { [5'd16 : 5'd23] }; }
     constraint Source2_Reg_Constraint { Source2 inside { [5'd16 : 5'd23] };}
     constraint Dest_Reg_Constraint    { Dest inside { [5'd16 : 5'd23] };   }
-
+    constraint Address_IType_Constraint    { Address_IType inside { [16'd0 : 16'd65532] };   }   //0xFFFC= 65532 decimal
+    
     function new; // Constructor
         randomize();
     endfunction 
