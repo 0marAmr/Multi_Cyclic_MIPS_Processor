@@ -262,6 +262,8 @@ localparam REG_FILE_ADDR_WIDTH =  5;
     Arithmatic_Logic_Unit #(
         .OPERAND_WIDTH(DATA_WIDTH)
     ) ALU (
+        .CLK(CLK),
+        .RST(RST),
         .Operand1(ALU_OPR1), 
         .Operand2(ALU_OPR2), 
         .Cntrl(ALU_CONTROL), 
@@ -359,8 +361,8 @@ localparam REG_FILE_ADDR_WIDTH =  5;
     ) lo (
         .CLK(CLK), 
         .RST(RST), 
-        .EN(lo_EN_EN),
-        .data_in(lo_data_data), 
+        .EN(lo_EN),
+        .data_in(lo_data), 
         .data_out(lo_out)
     );	
 
