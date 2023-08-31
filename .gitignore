@@ -5,3 +5,4 @@
 *.bat
 *.wdf
 xsim_1.c
+memory_contents.txt
