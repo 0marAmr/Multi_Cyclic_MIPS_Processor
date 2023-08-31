@@ -1,5 +1,6 @@
 module register_en #(
-	parameter width=32
+	parameter 	width = 32,
+				INIT_VAL = 0
 	)(
 	input	wire					CLK,
 	input	wire 					RST,  /*active low asynchronous reset*/
@@ -11,7 +12,7 @@ module register_en #(
 	 
 	 always @(posedge CLK, negedge RST)begin
 		if(!RST)begin
-			data_out <= 'd0;
+			data_out <= INIT_VAL;
 		end
 		else if (EN) begin
 			data_out <= data_in;
